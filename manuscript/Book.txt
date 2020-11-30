@@ -1,5 +1,6 @@
-Foreword.txt
-Introduction.txt
-TheStory.txt
+Forord.txt
+Introduktion.txt
+Eksempel.txt
+
 
 
