@@ -1,0 +1,9 @@
+{book: true, sample: false}
+# Forord
+Denne rapport er udarbejdet i et samarbejde under Center for Objekt Teknologi, COT,
+mellem Aarhus Universitet, WM-data og Teknologisk Institut.
+Vi ønsker at takke Henrik Røn, Flemming Nielsen, Hanne Buhl, Jørn Heideman, Torben
+Bach Christensen, Kirsten Hjerrild Nielsen, René Elmstrøm, Egil Andersen, Jesper
+Buhl, Ellen Agerbo og Jesper Petersen for mange konstruktive kommentarer.
+En særlig tak til Lisbeth Bergholt, Teknologisk Institut, for mange frugtbare diskussioner
+ved tilblivelsen af denne rapport.

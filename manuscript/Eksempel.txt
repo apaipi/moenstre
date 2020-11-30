@@ -1,0 +1,61 @@
+{book: true, sample: false}
+# Eksempel på brug af et mønster
+
+Forestil dig at man skal lave et tekstbehandlingssystem der kan lave dokumenter som
+indeholder både tekst og grafik. Systemet skal være effektivt, brugervenligt og med
+mulighed for senere udvidelse af funktionaliteten. Idet systemet skal være etWYSIWYG1-system, skal brugeren løbende kunne se hvordan det færdige dokument
+kommer til at se ud, og kunne ændre i det på en simpel måde. F.eks. kunne han lave en
+figur i sit dokument ved at lægge et grafisk billede ind og få en kasse tegnet rundt om
+det og en tekst placeret under figuren. Når han har fået det på plads, vil han gerne kunne
+skifte størrelse på figuren som helhed, altså lade kassens størrelse følge figurens. Han
+vil også kunne flytte figuren uden at teksten stadig står på den plads han flyttede figuren
+fra. Han vil med andre ord behandle noget der består af flere enheder, som en he lhed.
+Af ovenstående følger denne kravspecifikation:
+1. Tekst og grafik skal kunne bruges på samme måde og have samme prioritet; dvs.
+grafik er ikke en specialisering af tekst eller omvendt.
+2. Sammensatte elementer og enkelte elementer skal behandles ens. De skal have det
+samme interface så der kan opereres med dem uden viden om hvilken slags element
+der arbejdes på.
+3. Forskellige typer af enkelte elementer skal kunne analyseres på forskellig måde.
+F.eks. skal stavekontrol kunne udføres på en tekst, men ikke på en cirkel.
+En måde at leve op til kravspecifikationen er at lave en rekursiv sammensætning af de
+enkelte komponenter i dokumentet. Som et første skridt kan vi sætte bogstaver og grafik
+sammen fra venstre til højre for at danne en linje i dokumentet, flere linjer kan grupperes
+sammen til søjler, og flere søjler kan samles til en side i dokumentet o.s.v. Denne
+fysiske struktur kan repræsenteres ved at knytte et objekt til hvert element i dokumentet.
+Ikke bare de synlige elementer, bogstaverne og grafikken, men også søjlerne, linjerne og
+siderne.
+Klassediagrammet for dette design kan ses af figur 1. De enkelte elementer, såsom tekst
+og grafik, har deres egne klasser mens de sammensatte elementer, såsom linjer, søjler og
+sammensatte figurer, har en fælles klasse, sammensat element. Alle disse klasser er
+specialiseringer af klassen element, hvilket giver et fælles interface til alle slags elementer.
+Sammensatte elementer har tre basale ansvarsområder. De ved hvordan de skal tegne
+sig selv, de ved hvor de skal tegnes, og de kender de enkelte elementer de er bygget
+op af, børnene. Når et sammensat element får besked af den del af systemet der tager sig
+af brugerønsker, på at tegne sig selv eller ændre sig, vil det sende beskeden videre til
+alle de elementer det er bygget op af, så de også bliver tegnet/ændret som påkrævet.
+Med denne struktur lever systemet op til brugerkravene. Tekst og grafik ligger på samme
+niveau i klassehierarkiet, der er samme interface til enkeltstående og sammensatte
+elementer, og det er nemt at udvide systemet med flere typer elementer.
+
+Figur 1. Klassediagrammet for designet til teksteditoren. Sammensatte elementer som linjer, søjler og
+sider består af samlinger af enkelte elementer som grafik og tekst. De har selv ansvaret for at tilføje og
+slette de elementer de er opbygget af.
+
+
+{id="Klassediagrammet for designet til teksteditoren. Sammensatte elementer som linjer, søjler og sider består af samlinger af enkelte elementer som grafik og tekst. De har selv ansvaret for at tilføje og slette de elementer de er opbygget af."}
+![Klassediagrammet for designet til teksteditoren. Sammensatte elementer som linjer, søjler ogsider består af samlinger af enkelte elementer som grafik og tekst. De har selv ansvaret for at tilføje og slette de elementer de er opbygget af.](images/Mønstre_1.jpg)
+
+Denne løsning på et designproblem findes i designmønsteret „Composite“ som er
+beskrevet i GoF-bogen. En beskrivelse af et GoF-mønster består af flere dele. Den
+løsning der ligger i mønsteret, og de fordele og ulemper der er ved at anvende det, er
+mestendels beskrevet tekstuelt. Fordelene ved brug af Composite-mønsteret har vi været
+inde på. Som et eksempel på en ulempe ved mønsteret kan nævnes at det er svært på
+kørselstidspunktet at begrænse et sammensat element til kun at kunne sammensættes af
+bestemte typer delelementer da det er lavet så generelt at alt kan sættes sammen. Udover
+en tekstuel beskrivelse gives en grafisk beskrivelse af strukturen som den der er vist i
+figur 1 der kan give en hurtig, men overfladisk forståelse af løsningen. Bogen giver også
+implementationsideer og henvisninger til andre mønstre der er relaterede til det.
+Desuden gives henvisninger til eksempler på brug af mønsteret. Da mønstre skal have
+vist sig som ofte forekommende løsninger, mener forfatterne af GoF-bogen at der skal
+kunne henvises til mere end én anvendelse af mønsteret før der er tale om et mønster.
