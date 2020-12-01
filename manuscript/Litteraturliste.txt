@@ -1,0 +1,40 @@
+{book: true, sample: false}
+# Litteraturliste
+
+[Alex 1977] Christopher Alexander o.a.: A Pattern Language Oxford University Press, 1977
+
+[Alex 1979] Christopher Alexander: The Timeless Way of Building Oxford University Press, 1979
+
+[Rum 1998] Grady Booch, James Rumbaugh, Ivar Jacobson: The Unified Modeling Language Reference Manual , Addison-Wesley, 1998
+
+[Chasms 1995] Kyle Brown & Bruce G. Whitenack: Crossing Chasms — A Pattern Language for Object-RDBMS Integration.
+http://members.aol.com/kgb1001001/Chasms.htm
+ftp://members.aol.com/kgb1001001/Chasms/chasms.pdf
+
+[Chasms 1998] Kyle Brown: Crossing Chasms: The architectural patterns. http://www.ksccary.com/Articles/ArchitectualPatterns/ArchitecturalPatterns.htm
+
+[Busch 1997] F. Buschmann o.a: Pattern-Oriented Software Architecture: A System of Patterns John Wiley & Sons, 1997
+
+[PloP] James O. Coplien and Douglas C. Schmidt (editors): Pattern Languages of Program Design 1-3 Addison-Wesley, 1995-1997
+
+[Fowler 1997] M. Fowler: Analysis Patterns — Reusable object models. Addison-Wesley,1997
+
+[Gamma 1994] E. Gamma, R. Helm, R. Johnson & J. Vlissides: Design Patterns: Elements of Reusable Object-Oriented Software (Også kaldet GoF-bogen) Reading, MA: Addison-Wesley, 1994
+
+[Keller 1996] Wolfgang Keller: A Design Cookbook for Business Information Systems http://www.sdm.de/g/arcus/cookbook/relzs/index.htm
+
+[Mat 1997] L. Mathiassen, A. Munk-Madsen, P. A. Nielsen og J. Stage: Objektorienteret Analyse og Design Forlaget Marko, Ålborg, 1997
+
+[Mow 1998] T. Mowbray o.a.: Anti Patterns: Refactoring Software John Wiley & Sons, 1998
+
+[Rum 1991] J. Rumbaugh, M. Blaha, W. Premerlani, F. Eddy, W. Lorensen: Object-Oriented Modeling and Design Prentice Hall, 1991
+
+[Vlissides 1998] John Vlissides: Pattern Hatching — Design Patterns Applied Addison-Wesley,1998
+
+[uiuc1999] Mønstrenes hjemmeside: http://st-www.cs.uiuc.edu/users/patterns/patterns.html
+
+[oopsla87] De første mønstre: http://c2.com/doc/oopsla87.html
+
+[publication1997] Bøger om mønstre: http://www.sigs.com/publications/docs/objm/9703/9703.patterns.html
+
+[ICSE1996] Beskrivelse af erfaringer med brug af mønstre: http://www.bell-labs.com/~cope/Patterns/ICSE96/icse.html
