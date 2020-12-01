@@ -1,5 +1,35 @@
 {book: true, sample: false}
-# Appendix C
+# Appendix C Eksempler på mønstre
+
+## Analysemønstre — et eksempel
+
+{id="AnalyseTelefonbog"}
+![En model af en telefonbog hvor man skal tage hensyn til om man indsætter et telefonnummer ved en person eller et firma. Objekterne er ikke repræsenteret som.](images/AnalyseTelefonbog.jpg)
+
+{id="Party"}
+![En model af en telefonbog hvor person og firma er smeltet sammen i en abstrakt gruppe „party“. Der gælder det samme for objektpræsentationen som i figur 8. Bemærk at dette er et analysemønster og at nedarvingspilene til Party kun betyder at Person og Firma skal kunne behandles ens, ikke at de nødvendigvis skal være underklasser af samme superklasse.](images/Party.jpg)
+
+## Designmønstre — et eksempel
+
+
+{id="Mægler"}
+![En mægler tager sig af kommunikationen mellem et antal objekter i et system.](images/Mægler.jpg)
+
+
+## Arkitekturmønstre — to eksempler
+
+
+{id="Lagdeling"}
+![En lagdeling af et system til forenkling af systemudvikling og vedligeholdelse.](images/Lagdeling.jpg)
 
 
 
+{id="Broker"}
+![En kommunikationsprotokol mellem servere og klienter med forskellige fysiske placeringer.](images/Broker.jpg)
+
+
+
+## Databasemønstre — 2 eksempler
+
+{id="Fysiske Views"}
+![Strukturen for databasemønsteret Fysiske views.](images/Fysiske Views.jpg)

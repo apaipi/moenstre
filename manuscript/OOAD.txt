@@ -2,3 +2,7 @@
 # Mønstre og objektorienteret systemudvikling
 
 
+{id="Udviklingsproces"}
+![Delprocesserne i en udviklingsproces med udgangspunkt i anvendelse af mønstre. Pilene
+repræsenterer delprocesser i systemudvikling mens cirklerne repræsenterer henholdsvis den del af
+virkeligheden der er interessant for systemet, og de to delresultater, analysemodellen og systemdesignet.](images/Udviklingsproces.jpg)

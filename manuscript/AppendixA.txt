@@ -1,5 +1,7 @@
 {book: true, sample: false}
-# Appendix A
+# Appendix A UML
 
 
+{id="UML"}
+![UML er en grafisk notation til beskrivelse af et system.](images/UML.jpg)
 
