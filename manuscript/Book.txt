@@ -1,6 +1,9 @@
 Forord.txt
 Introduktion.txt
 Eksempel.txt
+Motivation.txt
+Litteraturliste.txt
+
 
 
 

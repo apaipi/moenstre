@@ -38,12 +38,8 @@ Med denne struktur lever systemet op til brugerkravene. Tekst og grafik ligger p
 niveau i klassehierarkiet, der er samme interface til enkeltstående og sammensatte
 elementer, og det er nemt at udvide systemet med flere typer elementer.
 
-Figur 1. Klassediagrammet for designet til teksteditoren. Sammensatte elementer som linjer, søjler og
-sider består af samlinger af enkelte elementer som grafik og tekst. De har selv ansvaret for at tilføje og
-slette de elementer de er opbygget af.
 
-
-{id="Klassediagrammet for designet til teksteditoren. Sammensatte elementer som linjer, søjler og sider består af samlinger af enkelte elementer som grafik og tekst. De har selv ansvaret for at tilføje og slette de elementer de er opbygget af."}
+{id="Klassediagram."}
 ![Klassediagrammet for designet til teksteditoren. Sammensatte elementer som linjer, søjler ogsider består af samlinger af enkelte elementer som grafik og tekst. De har selv ansvaret for at tilføje og slette de elementer de er opbygget af.](images/Mønstre_1.jpg)
 
 Denne løsning på et designproblem findes i designmønsteret „Composite“ som er

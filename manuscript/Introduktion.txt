@@ -63,6 +63,3 @@ Som notation i denne rapport er brugt UML, „Unified Modelling Language“ vers
 set på mønstre fra, benyttes forskellige notationer. Så når figurerne i rapporten ikke er
 nøjagtig som i bøgerne, er det fordi vi ved at „oversætte“ dem til UML undgår at beskrive
 og anvende forskellige notationer.
-
-{id="The elements of a Pattern description"}
-![The elements of a Pattern description](images/Pattern.png)
