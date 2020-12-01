@@ -20,27 +20,16 @@ Vi tager udgangspunkt i tre bøger og supplerer med to artikler.
 Bøgerne er Analysis Patterns af Martin Fowler [Fowler 1997], Design Patterns - Elements of reusable Object-Oriented Software af Gamma, Helm, Johnson og Vlissides, populært kaldet GoF-bogen (fordi dens forfattere kaldes Gang of Four, firebanden) [Gamma 1994] og Pattern-Oriented Software Architecture af Buschmann med flere [Busch 1997].
 
 
-Tilsammen indeholder bøgerne en mængde mønstre der dækker over både analyse- og designdelen af en udviklingsproces. Mønstrene er gennemarbejdede fra forfatternes
-side, og fordi bøgerne har været populære og anvendt i et par år, er mønstrene også gennemprøvede af udviklere. Dette har afstedkommet en erfaringsopsamling som er beskrevet i afsnit 5.
+Tilsammen indeholder bøgerne en mængde mønstre der dækker over både analyse- og designdelen af en udviklingsproces. Mønstrene er gennemarbejdede fra forfatternes side, og fordi bøgerne har været populære og anvendt i et par år, er mønstrene også gennemprøvede af udviklere. Dette har afstedkommet en erfaringsopsamling som er beskrevet i afsnit 5.
 
 
-De tre bøger indeholder forskellige typer af mønstre; [Fowler 1997] indeholder analysemønstre, [Gamma 1994] indeholder designmønstre, og [Busch 1997] indeholder
-såvel designmønstre som arkitekturmønstre. Analysemønstre fokuserer på begreber og sammenhænge fundet i problemområdet, designmønstre fokuserer på design af klasser/objekter og sammenhænge mellem disse, og arkitekturmønstre fokuserer på den overordnede struktur af designet, skelettet af systemet. Forskellen mellem de tre typer vil
-senere blive forklaret i større detalje. Vi vil give eksempler på de tre former for mønstre og brugen af dem og et eksempel på brug af alle tre slags i samme design.
+De tre bøger indeholder forskellige typer af mønstre; [Fowler 1997] indeholder analysemønstre, [Gamma 1994] indeholder designmønstre, og [Busch 1997] indeholder såvel designmønstre som arkitekturmønstre. Analysemønstre fokuserer på begreber og sammenhænge fundet i problemområdet, designmønstre fokuserer på design af klasser/objekter og sammenhænge mellem disse, og arkitekturmønstre fokuserer på den overordnede struktur af designet, skelettet af systemet. Forskellen mellem de tre typer vil senere blive forklaret i større detalje. Vi vil give eksempler på de tre former for mønstre og brugen af dem og et eksempel på brug af alle tre slags i samme design.
 
 
-De to artikler vi supplerer med, er Crossing Chasms — A Pattern Language for Object- RDBMS Integration af Kyle Brown og Bruce Whitenack [Chasms 1995] og A Design
-Cookbook for Business Information Systems af Wolfgang Keller [Keller 1996]. (Beggeartikler ligger på world wide web, se litteraturlisten.) De fokuserer på integration
-mellem et program (som i det ene tilfælde er objektorienteret) og en relationel database, et emne som vi har ment at mange læsere ville interessere sig for. Mønstrene i de to
-artikler kalder vi under ét for databasemønstre.
+De to artikler vi supplerer med, er Crossing Chasms — A Pattern Language for Object- RDBMS Integration af Kyle Brown og Bruce Whitenack [Chasms 1995] og A Design Cookbook for Business Information Systems af Wolfgang Keller [Keller 1996]. (Beggeartikler ligger på world wide web, se litteraturlisten.) De fokuserer på integration mellem et program (som i det ene tilfælde er objektorienteret) og en relationel database, et emne som vi har ment at mange læsere ville interessere sig for. Mønstrene i de to artikler kalder vi under ét for databasemønstre.
 
 
-Afsnit 2 giver et udførligt eksempel på brugen af et designmønster. Afsnit 3 beskriver fordelene ved at anvende mønstre. Afsnit 4 beskriver de tre typer mønstre, analyse-,
-design- og arkitektur-mønstre, og foreslår anvendelsen af dem i forskellige dele af en udviklingsproces. Derudover motiveres og beskrives databasemønstre (som vi ikke
-betragter som en yderligere type mønster). Afsnit 5 indeholder tilbagemeldinger fra designere der har arbejdet med mønstre. Afsnit 6 er en kort guide til hvordan man
-kommer videre med mønstre efter denne rapport. Appendiks B giver et stort eksempel hvori der indgår anvendelse af de førnævnte tre typer mønstre. Appendiks C indeholder
-eksempler på analyse-, design-, arkitektur- og databasemønstre.
+Afsnit 2 giver et udførligt eksempel på brugen af et designmønster. Afsnit 3 beskriver fordelene ved at anvende mønstre. Afsnit 4 beskriver de tre typer mønstre, analyse-, design- og arkitektur-mønstre, og foreslår anvendelsen af dem i forskellige dele af en udviklingsproces. Derudover motiveres og beskrives databasemønstre (som vi ikke betragter som en yderligere type mønster). Afsnit 5 indeholder tilbagemeldinger fra designere der har arbejdet med mønstre. Afsnit 6 er en kort guide til hvordan man kommer videre med mønstre efter denne rapport. Appendiks B giver et stort eksempel hvori der indgår anvendelse af de førnævnte tre typer mønstre. Appendiks C indeholder eksempler på analyse-, design-, arkitektur- og databasemønstre.
 
 
-Som notation i denne rapport er brugt UML, „Unified Modelling Language“ version 1.0 [Rum 1998]. UML-notationen er beskrevet i appendiks A. I de bøger og artikler vi har
-set på mønstre fra, benyttes forskellige notationer. Så når figurerne i rapporten ikke er nøjagtig som i bøgerne, er det fordi vi ved at „oversætte“ dem til UML undgår at beskrive og anvende forskellige notationer.
+Som notation i denne rapport er brugt UML, „Unified Modelling Language“ version 1.0 [Rum 1998]. UML-notationen er beskrevet i appendiks A. I de bøger og artikler vi har set på mønstre fra, benyttes forskellige notationer. Så når figurerne i rapporten ikke er nøjagtig som i bøgerne, er det fordi vi ved at „oversætte“ dem til UML undgår at beskrive og anvende forskellige notationer.
