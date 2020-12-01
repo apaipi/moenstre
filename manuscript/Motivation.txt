@@ -1,83 +1,34 @@
 {book: true, sample: false}
 # Motivation
 
-Det at bruge mønstre til at beskrive abstrakte løsninger på tilbagevendende problemer
-inden for objektorienteret design, har vist sig at have følgende
-fordele:
+Det at bruge mønstre til at beskrive abstrakte løsninger på tilbagevendende problemer inden for objektorienteret design, har vist sig at have følgende fordele:
 
 a) Erfaringsformidling
 b) Fælles ordforråd
 c) Bedre dokumentation
 
-Naturligvis er der også ulemper forbundet med anvendelsen af
-mønstre. Den største ulempe er at udviklere der lige er begyndt at
-anvende mønstre, har en tendens til „overforbrug“ af mønstre. Man
-bliver så imponeret af ideen at man ønsker at bruge mønstre til alle
-designbeslutninger. Men der findes ikke en mønsterløsning til alle
-problemer. Og det er ikke meningen at man skal få sit problem til at
-passe til et mønster bare for at kunne bruge mønstre, men at man kan
-bruge et mønster fordi det passer til ens problem. I beskrivelserne af mønstrene findes også forslag til variationer af mønstrene.
+Naturligvis er der også ulemper forbundet med anvendelsen af mønstre. Den største ulempe er at udviklere der lige er begyndt at anvende mønstre, har en tendens til „overforbrug“ af mønstre. Man bliver så imponeret af ideen at man ønsker at bruge mønstre til alle designbeslutninger. Men der findes ikke en mønsterløsning til alle problemer. Og det er ikke meningen at man skal få sit problem til at
+passe til et mønster bare for at kunne bruge mønstre, men at man kan bruge et mønster fordi det passer til ens problem. I beskrivelserne af mønstrene findes også forslag til variationer af mønstrene.
 
 ## Erfaringsformidling
 
-Ligesom i andre discipliner indenfor systemudvikling findes der
-problemer der forekommer oftere end andre indenfor objektorienteret
-design. Mange af disse problemer har en umiddelbar løsning der kan
-have uheldige konsekvenser. Det er svært at forudse konsekvenserne af
-en løsning på forhånd, og uden erfaring i at løse designproblemer kan
-ens løsninger tit ende med at blive de umiddelbare, dårligere
-løsninger. Når en systemudvikler har opnået en vis erfaring, vil han
-kunne genkende nogle mønstre i problemer og løsninger og umiddelbart
-kunne anvende den bedste løsning han kender. Hvis han beskriver denne løsning som et mønster, vil andre udviklere kunne bruge hans erfaring og spare tid fordi de ikke behøver genopfinde de gode løsninger.
+Ligesom i andre discipliner indenfor systemudvikling findes der problemer der forekommer oftere end andre indenfor objektorienteret design. Mange af disse problemer har en umiddelbar løsning der kan have uheldige konsekvenser. Det er svært at forudse konsekvenserne af en løsning på forhånd, og uden erfaring i at løse designproblemer kan ens løsninger tit ende med at blive de umiddelbare, dårligere løsninger. Når en systemudvikler har opnået en vis erfaring, vil han kunne genkende nogle mønstre i problemer og løsninger og umiddelbart kunne anvende den bedste løsning han kender. Hvis han beskriver denne løsning som et mønster, vil andre udviklere kunne bruge hans erfaring og spare tid fordi de ikke behøver genopfinde de gode løsninger.
 
 ## Fælles ordforråd
 
-Udover at erfaring bliver nedskrevet og formidlet på en præcis måde,
-vil udviklerne ved hjælp af mønstre kunne diskutere udvikling på et
-mere abstrakt niveau end normalt fordi et mønster dækker over et helt
-lille deldesign og mønstrene kan identificeres ved hjælp af deres
-navn. Når systemudviklere der kender til mønstre, diskuterer
-forskellige potentielle løsninger på et problem, bruger de navnene på
-mønstrene til at kunne kommunikere om komplekse ideer på en præcis og
-kortfattet måde. Hvis mønstre bliver alment kendte og brugt i både
-undervisningen af udviklere og det daglige arbejde, vil disse mønstre
-kunne bruges i samme grad som algoritmer og datastrukturer bruges
-indenfor andre programmeringssprog.
+Udover at erfaring bliver nedskrevet og formidlet på en præcis måde, vil udviklerne ved hjælp af mønstre kunne diskutere udvikling på et mere abstrakt niveau end normalt fordi et mønster dækker over et helt lille deldesign og mønstrene kan identificeres ved hjælp af deres navn. Når systemudviklere der kender til mønstre, diskuterer forskellige potentielle løsninger på et problem, bruger de navnene på
+mønstrene til at kunne kommunikere om komplekse ideer på en præcis og kortfattet måde. Hvis mønstre bliver alment kendte og brugt i både undervisningen af udviklere og det daglige arbejde, vil disse mønstre kunne bruges i samme grad som algoritmer og datastrukturer bruges indenfor andre programmeringssprog.
 
 
 ## Dokumentation
 
-Med brug af mønstre kan dokumentation af softwaresystemer
-effektiviseres da det er muligt at udtrykke sig præcist med få
-ord. Det er nemmere og hurtigere at angive anvendelsen af et bestemt
-design ved at skrive et navn på et mønster i dokumentationen end ved
-at beskrive alle dele af, og relationer i, designet. Det er nok at
-skrive hvilkenrolle en bestemt klasse eller et bestemt delsystem
-spiller i et mønster. Denne kortfattede information vil give læseren
-oplysninger om hvilke andre klasser denne klasse arbejder sammen med, og hvilket ansvar, eventuelt hvilket interface, den har.
+Med brug af mønstre kan dokumentation af softwaresystemer effektiviseres da det er muligt at udtrykke sig præcist med få ord. Det er nemmere og hurtigere at angive anvendelsen af et bestemt
+design ved at skrive et navn på et mønster i dokumentationen end ved at beskrive alle dele af, og relationer i, designet. Det er nok at skrive hvilkenrolle en bestemt klasse eller et bestemt delsystem spiller i et mønster. Denne kortfattede information vil give læseren oplysninger om hvilke andre klasser denne klasse arbejder sammen med, og hvilket ansvar, eventuelt hvilket interface, den har.
 
-En anden fordel er at vedligeholdelsesbyrden reduceres ved at bruge
-mønstre. Mønstrene stiler mod fleksibelt design og gør det dermed
-nemmere at vedligeholde systemerne. Når mønstre anvendes i en
-udviklingsproces, vil den overordnede idé løbende kunne beskrives ved
-hjælp af mønstre. Den derved nedskrevne viden ville normalt have været
-implicit hos udviklerne, men det at gøre den eksplicit gør det lettere
-at bruge den. Udviklerne følger dermed den samme overordnede
-designidé, og dette gør designprocessen mere effektiv.
+En anden fordel er at vedligeholdelsesbyrden reduceres ved at bruge mønstre. Mønstrene stiler mod fleksibelt design og gør det dermed nemmere at vedligeholde systemerne. Når mønstre anvendes i en
+udviklingsproces, vil den overordnede idé løbende kunne beskrives ved hjælp af mønstre. Den derved nedskrevne viden ville normalt have været implicit hos udviklerne, men det at gøre den eksplicit gør det lettere at bruge den. Udviklerne følger dermed den samme overordnede designidé, og dette gør designprocessen mere effektiv.
 
-For ethvert mønster er der en beskrivelse af sammenhængen; en
-beskrivelse af hvor dette mønster med fordel kan anvendes. Ved at
-skrive at et bestemt mønster er valgt, skrives dermed også, i hvert
-fald i grove træk, hvilket problem der førte til at mønsteret blev
-valgt. I traditionel dokumentation findes som oftest ikke nogen
-beskrivelse af hvad der førte til valget af en bestemt løsning. Hvis
-den der læser dokumentationen også kender til mønstre, vil vedkommende
-være i stand til at fange den indforståede information der ligger i at
-et bestemt mønster er valgt. For at kunne få fordel af dokumentation
-med mønstre kræves det naturligvis at læseren af dokumentationen kender, eller i det
-mindste har adgang til, en beskrivelse af de mønstre der er anvendt.
+For ethvert mønster er der en beskrivelse af sammenhængen; en beskrivelse af hvor dette mønster med fordel kan anvendes. Ved at skrive at et bestemt mønster er valgt, skrives dermed også, i hvert fald i grove træk, hvilket problem der førte til at mønsteret blev valgt. I traditionel dokumentation findes som oftest ikke nogen beskrivelse af hvad der førte til valget af en bestemt løsning. Hvis
+den der læser dokumentationen også kender til mønstre, vil vedkommende være i stand til at fange den indforståede information der ligger i at et bestemt mønster er valgt. For at kunne få fordel af dokumentation med mønstre kræves det naturligvis at læseren af dokumentationen kender, eller i det mindste har adgang til, en beskrivelse af de mønstre der er anvendt.
 
-Dokumentation ved brug af mønstre kan dermed give mere information end
-traditionel dokumentation, hvilket, uden ekstra arbejde, vil kunne
-forbedre dokumentationen. UML [Rum 1999] indeholder beskrivelser af
-anvendelser af designmønstre som umiddelbart kan bruges i dokumentationen. Dette er illustreret i appendiks A.
+Dokumentation ved brug af mønstre kan dermed give mere information end traditionel dokumentation, hvilket, uden ekstra arbejde, vil kunne forbedre dokumentationen. UML [Rum 1999] indeholder beskrivelser af anvendelser af designmønstre som umiddelbart kan bruges i dokumentationen. Dette er illustreret i appendiks A.
