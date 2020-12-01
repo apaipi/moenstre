@@ -1,10 +1,16 @@
+frontmatter.txt
 Forord.txt
+mainmatter.txt
 Introduktion.txt
 Eksempel.txt
 Motivation.txt
 OOAD.txt
 Erfaringer.txt
 HvordanVidere.txt
+backmatter.txt
+AppendixA.txt
+AppendixB.txt
+AppendixC.txt
 Litteraturliste.txt
 
 
