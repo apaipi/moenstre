@@ -1,0 +1,4 @@
+{book: true, sample: false}
+# Mønstre og objektorienteret systemudvikling
+
+

@@ -1,0 +1,4 @@
+{book: true, sample: false}
+# Erfaringer med mønstre
+
+

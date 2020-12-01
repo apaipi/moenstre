@@ -2,6 +2,9 @@ Forord.txt
 Introduktion.txt
 Eksempel.txt
 Motivation.txt
+OOAD.txt
+Erfaringer.txt
+HvordanVidere.txt
 Litteraturliste.txt
 
 
