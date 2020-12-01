@@ -1,4 +1,24 @@
 {book: true, sample: false}
 # Erfaringer med mønstre
 
+Dette og næste afsnit er skrevet med fokus på erfaring med og fordele af anvendelse af designmønstre. Der er tilsvarende erfaringsopsamlinger for analyse- og arkitekturmønstre, men vi har fokuseret på designmønstre her da det er den ældste og mest velbeskrevne form for mønstre indenfor systemudvikling.
 
+
+Der findes en del forskergrupper som beskæftiger sig med mønstre. Den gruppe der blev stiftet først, kalder sig „The Pattern Community“. En del af forskerne i denne gruppe har samlet deres erfaringer med anvendelse af designmønstre i artiklen „Industrial Experience with Design Patterns“ [ICSE1996], som er tilgængelig fra mønstrenes hjemmeside [uiuc1999].
+
+
+En af forskerne hvis arbejde er med i artiklen, er John Vlissides, som er en af forfatterne til GoF-bogen. I artiklen beskriver han hvordan det at begynde at anvende mønstre påvirkede hans arbejdsproces. Han havde arbejdet som konsulent for et halvt dusin firmaer i omkring 4 år da han i 1993 begyndte at anvende de rå mønsterbeskrivelser, herefter kaldet præmønstre (Ordet „præmønster“ er vores egen konstruktion.), der senere skulle komme til at være en del af GoF-bogen, i sit arbejde. Der var to ting der havde irriteret ham gennem årene, og det var dem der fik ham til at begynde at anvende sine præmønstre.
+
+
+For det første var det næsten umuligt for John Vlissides at få systemudviklerne til at beskrive deres design for ham. Både fordi de ikke havde en god måde at kommunikere designet på, og fordi de ikke var bevidste om relationerne mellem delsystemerne i designet.
+
+
+For det andet havde udviklerne designet systemet uden at være opmærksomme på hvorfor de havde valgt et bestemt design. Årsagerne til de forskellige designbeslutninger var aldrig blevet husket endsige nedskrevet. Dette resulterede i at ændringer i kravspecifikationen ikke umiddelbart kunne overføres til designet fordi det ikke var oplagt hvor designet skulle ændres for at tilpasse det til ændringerne.
+
+
+Da John Vlissides begyndte at anvende præmønstre, gjorde han det ved at sammenligne klienternes design med de præmønstre han kendte for design. Hvis deres design stemte overens med et præmønster han kendte, kunne han associere delene af deres design med delene i præmønsteret og se om de passede sammen. På den måde skabte han en referenceramme når de diskuterede design. Det blev lettere at kommunikere design, og det blev lettere at stille udviklerne de rigtige spørgsmål.
+
+
+Artiklen indeholder udover seks indlæg om erfaringer en opsummering af fælles erfaringer. De vigtigste erfaringer der uddrages, er følgende: Mønstre er et godt kommunikationsmedie til gruppekommunikation fordi det giver udviklerne i gruppen fælles referenceramme med abstrakte, korte og præcise designbeskrivelser. Beskrivelse af design ved hjælp af mønstre gør det nemmere for udviklerne hele tiden at holde sig deres designbeslutning for øje. Denne viden er normalt implicit, og det at gøre den eksplicit, og dermed synlig, gør udviklingsprocessen mere effektiv. Mønstrene er velegnede til undervisning i softwaredesign. Erfaring og gode designideer kan beskrives på en præcis og letforståelig måde som gør det langt nemmere for udviklere at genbruge andre udvikleres erfaring.
+
+I Danmark har flere arbejdspladser allerede forsøgt sig med brug af mønstre, og med stor succes. De erfaringer vi har hørt fra folk der har brugt dem, er følgende: Hvis man som udvikler møder et mønster der indeholder en løsning man selv har brugt, vil man blive bekræftet både i at man i sin tid valgte en god løsning, og i at mønstre beskriver gode løsninger på tilbagevendende problemer. Man vil blive klar over at man da man fandt på løsningen, kunne have sparet den tid det tog en at komme på løsningen, hvis man havde kendt til mønsteret. Og i fremtiden vil man kunne spare tid ved at bruge mønsterets navn når man skal forklare andre udviklere hvad man har gjort, i stedet for at skulle forklare alle indgående roller og ansvarsområder.

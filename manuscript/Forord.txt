@@ -8,6 +8,7 @@ Ole Vedel Villumsen, WM-data
 
 COT/4-07-V2.2
 Center for Objekt Teknologi (COT) er et projekt til forskning i, samt modning og indførelse af objektteknologi i danske virksomheder. Projektet er støttet af Center for IT-forskning og Erhvervsfremmestyrelsen.
+
 Deltagere i projektet er:
 Maersk Line, Maersk Training Center, Bang & Olufsen, WM-data, Rambøll, Danfoss, Systematic Software Engineering, Odense Stålskibsværft, A.P. Møller, Aarhus Universitet, Odense Universitet, Københavns Universitet, Teknologisk Institut og Dansk Maritimt Institut
 

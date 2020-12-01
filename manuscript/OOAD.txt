@@ -15,8 +15,7 @@ Umiddelbart kan siges at analyse- og arkitekturmønstre, idet de bruger objekt-t
 
 
 
-Hvad designmønstre angår, stiller sagen sig lidt anderledes. På den ene side er det rigtigt at mange designmønstre i deres løsningsbeskrivelse gør brug af objektorienterede sprogkonstruktioner som polymorfi og nedarving. På den anden side er disse ikke essentielle for implementationen af mønstrene. Nogle designmønstre kan fuldt ud implementeres i andre former for sprog mens andre bare mister en del af deres elegance ved det. Det kan blive nødvendigt at gå på kompromis med sine udtryksmuligheder afhængigt af hvilket værktøj der benyttes, men det er stadig muligt at bruge de gode ideer der ligger i dem,
-indenfor andre sprogparadigmer såsom funktionelle eller imperative sprog.
+Hvad designmønstre angår, stiller sagen sig lidt anderledes. På den ene side er det rigtigt at mange designmønstre i deres løsningsbeskrivelse gør brug af objektorienterede sprogkonstruktioner som polymorfi og nedarving. På den anden side er disse ikke essentielle for implementationen af mønstrene. Nogle designmønstre kan fuldt ud implementeres i andre former for sprog mens andre bare mister en del af deres elegance ved det. Det kan blive nødvendigt at gå på kompromis med sine udtryksmuligheder afhængigt af hvilket værktøj der benyttes, men det er stadig muligt at bruge de gode ideer der ligger i dem, indenfor andre sprogparadigmer såsom funktionelle eller imperative sprog.
 
 ## Udviklingsprocessen
 
