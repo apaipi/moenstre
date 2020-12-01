@@ -3,29 +3,15 @@
 
 
 {id="MVC"}
-![Model-View-Controller, et arkitekturmønster. Model indeholder datamængden og den
-funktionalitet der ikke er relevant for kommunikationen med brugeren. View giver fremstillingen af data
-til brugeren. Der kan være flere forskellige views, ét til hver slags bruger. Controller tager sig af
-kommunikationen med brugeren, sender de korrekte data til de implicerede views og sørger for at holde
-data i modellen ajour.](images/MVC.jpg)
-
+![Model-View-Controller, et arkitekturmønster. Model indeholder datamængden og den funktionalitet der ikke er relevant for kommunikationen med brugeren. View giver fremstillingen af data til brugeren. Der kan være flere forskellige views, ét til hver slags bruger. Controller tager sig af kommunikationen med brugeren, sender de korrekte data til de implicerede views og sørger for at holde data i modellen ajour.](images/MVC.jpg)
 
 
 {id="Observer"}
-![En observer sørger for at kommunikationen holder data ved lige på den ønskede måde. En
-observer ændrer i modellen når der ændres i et view, modellen giver besked til Controller om at opdatere
-indholdet i alle views, og ændringen vises derefter i alle views.](images/MVCObserver.jpg)
+![En observer sørger for at kommunikationen holder data ved lige på den ønskede måde. En observer ændrer i modellen når der ændres i et view, modellen giver besked til Controller om at opdatere indholdet i alle views, og ændringen vises derefter i alle views.](images/MVCObserver.jpg)
 
 {id="Aktivitet"}
-![En aktivitet er planlagt eller udført og vil derfor enten reservere eller bruge en ressource.
-Ressourceallokering holder styr på hvilken type ressource der allokeres og hvor meget der er allokeret.
-Figuren er et eksempel på en analysemodel som vist på figur 2. Bemærk at dette er et analysemønster og
-at nedarvingspilene til Aktivitet kun betyder at Planlagt aktivitet og Udført aktivitet skal kunne behandles
-ens, ikke at de nødvendigvis skal være underklasser af samme superklasse.](images/Aktivitet.jpg)
+![En aktivitet er planlagt eller udført og vil derfor enten reservere eller bruge en ressource. Ressourceallokering holder styr på hvilken type ressource der allokeres og hvor meget der er allokeret. Figuren er et eksempel på en analysemodel som vist på figur 2. Bemærk at dette er et analysemønster og at nedarvingspilene til Aktivitet kun betyder at Planlagt aktivitet og Udført aktivitet skal kunne behandles ens, ikke at de nødvendigvis skal være underklasser af samme superklasse.](images/Aktivitet.jpg)
 
 {id="Systemdesigncirkel"}
-![Denne figur er et eksempel på indholdet af en systemdesigncirkel som vi så den i figur 2. Den
-viser det overordnede systemdesign beskrevet ved MVC hvor kommunikationen mellem delsystemerne er
-beskrevet ved Observer. Inden i modeldelen af MVC er analysemønsteret ressourceallokering brugt i
-analysen, og designet af dette beskrives ved State-mønsteret.](images/Systemdesigncirkel.jpg)
+![Denne figur er et eksempel på indholdet af en systemdesigncirkel som vi så den i figur 2. Den viser det overordnede systemdesign beskrevet ved MVC hvor kommunikationen mellem delsystemerne er beskrevet ved Observer. Inden i modeldelen af MVC er analysemønsteret ressourceallokering brugt i analysen, og designet af dette beskrives ved State-mønsteret.](images/Systemdesigncirkel.jpg)
 

@@ -4,4 +4,3 @@
 
 {id="UML"}
 ![UML er en grafisk notation til beskrivelse af et system.](images/UML.jpg)
-
