@@ -1,27 +1,17 @@
 {book: true, sample: false}
 # Introduktion
 
-Inden for softwareudvikling kan der spares tid ved genbrug, ikke bare af kode, men også
-af mere abstrakte ting som ideer. Erfarne udviklere genbruger egne systemudviklingsideer
-idet de genkender problemer de har haft før, og bruger den løsning der, ifølge
-deres erfaring, virker bedst. Visse af disse ideer viser sig som tilbagevendende mønstre i
-gode designs. Derfor fik det begreb der blev introduceret i edb-verdenen, navnet
-„patterns“, på dansk „mønstre“. En karakteristik der ofte gives af mønstre, er at de er
-abstrakte beskrivelser af løsninger på ofte tilbagevendende problemer.
-Vi vil her fokusere på brugen af mønstre ved at give en beskrivelse af hvad begrebet
-dækker over, og en forklaring af hvordan og hvornår mønstre kan anvendes i en
-udviklingsproces. Vores målgruppe er udviklere med edb-baggrund der ønsker at lære at
-anvende mønstre i deres arbejde. Kendskab til objektorienteret systemudvikling er en
-fordel fordi nogle mønstre er udviklet til objektorienteret brug. Vi vil senere vende
-tilbage til hvilke og hvorfor.
-Indenfor mønstersamfundet opererer man med nogle flere begreber end vi har valgt at
-behandle i denne rapport (f.eks. framework og pattern language). Når vi går uden om
-disse, er det dels fordi der hersker stor begrebsforvirring omkring dem, dels for at vores
-fremstilling ikke skal blive for omfattende.
-Vores mål er at forbedre udvikling af softwaresystemer ved hjælp af mønstre. Erfaring
-med brug af mønstre viser at brugen af mønstre letter og fremskynder arbejdet i en
-udviklingsproces og fører til et mere genbrugeligt design. Inspireret af dette har vi lavet
-denne appetitvækker til folk som ikke har prøvet at arbejde med mønstre før.
+Inden for softwareudvikling kan der spares tid ved genbrug, ikke bare af kode, men også af mere abstrakte ting som ideer. Erfarne udviklere genbruger egne systemudviklingsideer idet de genkender problemer de har haft før, og
+bruger den løsning der, ifølge deres erfaring, virker bedst. Visse af disse ideer viser sig som tilbagevendende mønstre i gode designs. Derfor fik det begreb der blev introduceret i edb-verdenen, navnet „patterns“, på dansk „mønstre“. En karakteristik der ofte gives af mønstre, er at de er abstrakte beskrivelser af løsninger på ofte tilbagevendende problemer.
+
+
+Vi vil her fokusere på brugen af mønstre ved at give en beskrivelse af hvad begrebet dækker over, og en forklaring af hvordan og hvornår mønstre kan anvendes i en udviklingsproces. Vores målgruppe er udviklere med edb-baggrund der ønsker at lære at anvende mønstre i deres arbejde. Kendskab til objektorienteret systemudvikling er en fordel fordi nogle mønstre er udviklet til objektorienteret brug. Vi vil senere vende tilbage til hvilke og hvorfor.
+
+
+Indenfor mønstersamfundet opererer man med nogle flere begreber end vi har valgt at behandle i denne rapport (f.eks. framework og pattern language). Når vi går uden om disse, er det dels fordi der hersker stor begrebsforvirring omkring dem, dels for at vores fremstilling ikke skal blive for omfattende.
+
+
+Vores mål er at forbedre udvikling af softwaresystemer ved hjælp af mønstre. Erfaring med brug af mønstre viser at brugen af mønstre letter og fremskynder arbejdet i en udviklingsproces og fører til et mere genbrugeligt design. Inspireret af dette har vi lavet denne appetitvækker til folk som ikke har prøvet at arbejde med mønstre før.
 
 ## Overblik
 Vi tager udgangspunkt i tre bøger og supplerer med to artikler.
