@@ -86,7 +86,7 @@ Servere registrerer sig hos brokeren. Klienter tilgår servernes funktionalitet 
 
 
 
-## Databasemønstre — 2 eksempler
+## Databasemønstre — to eksempler
 
 Vi præsenterer i dette afsnit et eksempel fra [Chasms 1995] og ét fra [Keller 1996]. Da det sidste er det enkleste, tager vi det først.
 
