@@ -1,12 +1,12 @@
 {book: true, sample: false}
 # Appendix C Eksempler på mønstre
 
-## Analysemønstre — et eksempel
+## Analysemønstre - et eksempel
 
-For at give et eksempel på et simpelt analysemønster vises Party (Bemærk at „party“ i denne sammenhæng ikke betyder „fest“, men „part“.)-mønsteret fra bogen „Analysis Patterns — Reusable Object Models“ skrevet af Martin Fowler:
+For at give et eksempel på et simpelt analysemønster vises Party (Bemærk at „party“ i denne sammenhæng ikke betyder „fest“, men „part“)-mønsteret fra bogen „Analysis Patterns — Reusable Object Models“ skrevet af Martin Fowler:
 
 {id="AnalyseTelefonbog"}
-![Figur 8. En model af en telefonbog hvor man skal tage hensyn til om man indsætter et telefonnummer ved en person eller et firma. Objekterne er ikke repræsenteret som.](images/AnalyseTelefonbog.jpg)
+![Figur 8. En model af en telefonbog hvor man skal tage hensyn til om man indsætter et telefonnummer ved en person eller et firma. Objekterne er ikke repræsenteret som klasser da det er en analysemodel og dermed ikke bestemt at de skal designes som klasser i systemet..](images/AnalyseTelefonbog.jpg)
 
 I hver beskrivelse af et analysemønster følges et eksempel fra den virkelige verden som læseren i større eller mindre grad kan forholde sig til, alt efter egen erfaring. I dette mønster er eksemplet dog til at følge idet Martin Fowler beskriver kompleksiteten af at modellere en privat telefonbog af den slags vi alle sammen har liggende i skuffen. Den umiddelbare model ville se ud som figur 8.
 
@@ -23,7 +23,7 @@ Dette simple analysemønster kan nu bruges i mange forskellige sammenhænge i an
 
 
 
-## Designmønstre — et eksempel
+## Designmønstre - et eksempel
 
 
 Som et eksempel har vi valgt Mediator-mønsteret fra GoF-bogen [Gamma 1994]. Motivationen for at have dette mønster er at det ville være nyttigt at kunne lave et fleksibelt og overskueligt design af et system der indeholder mange objekter der kommunikerer med hinanden. Objektorienteret design lægger op til at opførsel distribueres ud til de deltagende objekter. Den umiddelbare måde at lade mange objekter kommunikere med hinanden på er ved simpelthen at lade dem kende til hinanden og lade dem kommunikere direkte med hinanden. Problemet med denne løsning er at objekterne bliver stærkt forbundne og at det dermed bliver svært at overskue og ikke mindst ændre i systemet.
@@ -38,12 +38,12 @@ Denne mægler vil nu kende til alle de andre objekter og tage sig af kommunikati
 
 a) der findes en mængde af objekter der kommunikerer på en veldefineret, men kompleks måde; den resulterende afhængighed imellem objekter bliver ustruktureret og svær at overskue;
 b) genbrug af et objekt er besværlig fordi objektet referer til og kommunikerer med mange andre objekter;
-c)en opførsel der er distribueret mellem flere klasser, skal kunne tilpasses uden brug mange underklasser.
+c) en opførsel der er distribueret mellem flere klasser, skal kunne tilpasses uden brug mange underklasser.
 
 
 En mere detaljeret viden om hvordan mønsteret skal anvendes, kan findes i afsnittene om deltagende objekter, kommunikation mellem dem og implementation. Desuden giver GoF-bogen kodeeksempler og en beskrivelse af de konsekvenser, positive som negative, der er ved anvendelsen af dette mønster.
 
-## Arkitekturmønstre — to eksempler
+## Arkitekturmønstre - to eksempler
 
 
 Vi har valgt at vise to eksempler på arkitekturmønstre fra bogen: „A System of Patterns“ [Busch 1997], *Layers* og *Broker*. Dette katalog af mønstre starter hver mønsterbeskrivelse med en kort præsentation af mønsterets brugbarhed, og for *Layers* beskrives dette som følger:
@@ -68,7 +68,7 @@ Bemærk at beskrivelsen af dette mønster ikke viser præcis hvordan disse lag s
 {id="Lagdeling"}
 ![Figur 11. En lagdeling af et system til forenkling af systemudvikling og vedligeholdelse.](images/Lagdeling.jpg)
 
-Et andet eksempel på et arkitekturmønster er Broker. Mønsteret kan bruges til at strukturere distribuerede softwaresystemer med komponenter der er placerede forskellige steder og som kommunikerer med hinanden ved hjælp af kald af hinandens metoder. En Broker-komponent er ansvarlig for at koordinere kommunikation, såsom at videresende forespørgsler, samt at sende transmissioner og exceptions. Eksemplet fra den virkelige verden er et byinformationssystem der er designet til at køre på et WAN. Nogle computere i netværket er værter for en eller flere servicefunktioner der vedligeholder information om begivenheder, restauranter, hoteller eller offentlige transportmidler. Tur ister kan så, fra alle steder i byen, finde de oplysninger de er interesserede i, ved hjælp af en WWW-browser. Data er distribueret over netværket i stedet for at ligge i terminalerne. Da det forventes at systemet vil ændre sig og vokse kontinuerligt, skal de individuelle servicefunktioner afkobles fra hinanden. Terminalerne skal yderligere kunne tilgå disse funktioner uden at kende lokaliteten af dem.
+Et andet eksempel på et arkitekturmønster er Broker. Mønsteret kan bruges til at strukturere distribuerede softwaresystemer med komponenter der er placerede forskellige steder og som kommunikerer med hinanden ved hjælp af kald af hinandens metoder. En Broker-komponent er ansvarlig for at koordinere kommunikation, såsom at videresende forespørgsler, samt at sende transmissioner og exceptions. Eksemplet fra den virkelige verden er et byinformationssystem der er designet til at køre på et WAN. Nogle computere i netværket er værter for en eller flere servicefunktioner der vedligeholder information om begivenheder, restauranter, hoteller eller offentlige transportmidler. Turister kan så, fra alle steder i byen, finde de oplysninger de er interesserede i, ved hjælp af en browser. Data er distribueret over netværket i stedet for at ligge i terminalerne. Da det forventes at systemet vil ændre sig og vokse kontinuerligt, skal de individuelle servicefunktioner afkobles fra hinanden. Terminalerne skal yderligere kunne tilgå disse funktioner uden at kende lokaliteten af dem.
 
 
 Det er altså et distribueret system med uafhængige sammenhængskomponenter. Motivationen for at bruge Broker-mønsteret ligger i at det at lave et system bestående af separate delkomponenter giver større fleksibilitet, vedligeholdelsesmuligheder og muligheder for ændringer end ét stort system. Problemet med et distribueret system af kommunikerende komponenter er dog at det bliver begrænset af den store afhængighed komponenterne imellem. Det bliver afhængigt af de kommunikationsmekanismer der bliver brugt, klienter skal vide hvor serverne ligger, og i mange tilfælde er løsningen begrænset til at blive skrevet i ét programmeringssprog.
@@ -86,7 +86,7 @@ Servere registrerer sig hos brokeren. Klienter tilgår servernes funktionalitet 
 
 
 
-## Databasemønstre — to eksempler
+## Databasemønstre - to eksempler
 
 Vi præsenterer i dette afsnit et eksempel fra [Chasms 1995] og ét fra [Keller 1996]. Da det sidste er det enkleste, tager vi det først.
 
