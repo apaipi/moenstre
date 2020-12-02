@@ -3,33 +3,103 @@
 
 ## Analysemønstre — et eksempel
 
+For at give et eksempel på et simpelt analysemønster vises Party (Bemærk at „party“ i denne sammenhæng ikke betyder „fest“, men „part“.)-mønsteret fra bogen „Analysis Patterns — Reusable Object Models“ skrevet af Martin Fowler:
+
 {id="AnalyseTelefonbog"}
-![En model af en telefonbog hvor man skal tage hensyn til om man indsætter et telefonnummer ved en person eller et firma. Objekterne er ikke repræsenteret som.](images/AnalyseTelefonbog.jpg)
+![Figur 8. En model af en telefonbog hvor man skal tage hensyn til om man indsætter et telefonnummer ved en person eller et firma. Objekterne er ikke repræsenteret som.](images/AnalyseTelefonbog.jpg)
+
+I hver beskrivelse af et analysemønster følges et eksempel fra den virkelige verden som læseren i større eller mindre grad kan forholde sig til, alt efter egen erfaring. I dette mønster er eksemplet dog til at følge idet Martin Fowler beskriver kompleksiteten af at modellere en privat telefonbog af den slags vi alle sammen har liggende i skuffen. Den umiddelbare model ville se ud som figur 8.
+
+Han skriver at et af problemerne ved at modellere en indekseret telefonbog ligger i at man ofte gerne vil have oplysninger ikke bare om en person, men ind imellem også om et firma, og at det ikke er nødvendigt at tale med en bestemt person i det firma hvis man bare skal bestille en pizza. Så han leder efter en generalisering af de to begreber person og firma så han får noget at hænge oplysninger op på uden at skulle tage hensyn til om det er et firma eller en person.
+
+
+Hans løsning er at lave en abstraktion over person og firma så de for alle praktiske formål opfører sig ens. Denne abstraktion kalder han „party“ og analysemodellen ser nu ud som vist i figur 9.
 
 {id="Party"}
-![En model af en telefonbog hvor person og firma er smeltet sammen i en abstrakt gruppe „party“. Der gælder det samme for objektpræsentationen som i figur 8. Bemærk at dette er et analysemønster og at nedarvingspilene til Party kun betyder at Person og Firma skal kunne behandles ens, ikke at de nødvendigvis skal være underklasser af samme superklasse.](images/Party.jpg)
+![Figur 9. En model af en telefonbog hvor person og firma er smeltet sammen i en abstrakt gruppe „party“. Der gælder det samme for objektpræsentationen som i figur 8. Bemærk at dette er et analysemønster og at nedarvingspilene til Party kun betyder at Person og Firma skal kunne behandles ens, ikke at de nødvendigvis skal være underklasser af samme superklasse.](images/Party.jpg)
+
+
+Dette simple analysemønster kan nu bruges i mange forskellige sammenhænge i andre analysemønstre hvor abstraktionen bliver en del af en større løsning. For at give en bedre forståelse af hvad analysemønstre er, har vi inkluderet brugen af et knap så simpelt mønster i vores eksempel i appendiks B.
+
+
 
 ## Designmønstre — et eksempel
 
 
-{id="Mægler"}
-![En mægler tager sig af kommunikationen mellem et antal objekter i et system.](images/Mægler.jpg)
+Som et eksempel har vi valgt Mediator-mønsteret fra GoF-bogen [Gamma 1994]. Motivationen for at have dette mønster er at det ville være nyttigt at kunne lave et fleksibelt og overskueligt design af et system der indeholder mange objekter der kommunikerer med hinanden. Objektorienteret design lægger op til at opførsel distribueres ud til de deltagende objekter. Den umiddelbare måde at lade mange objekter kommunikere med hinanden på er ved simpelthen at lade dem kende til hinanden og lade dem kommunikere direkte med hinanden. Problemet med denne løsning er at objekterne bliver stærkt forbundne og at det dermed bliver svært at overskue og ikke mindst ændre i systemet.
 
+
+Designmønsterets løsning er at tilføje et ekstra objekt Mediator, eller mægler, som vist i figur 10.
+
+{id="Mægler"}
+![Figur 10. En mægler tager sig af kommunikationen mellem et antal objekter i et system.](images/Mægler.jpg)
+
+Denne mægler vil nu kende til alle de andre objekter og tage sig af kommunikationen mellem dem. Så når et objekt bliver ændret eller fjernet, kan den del af kommunikationen der havde med den at gøre, ændres i mægleren, og det vil direkte kunne ses hvilke andre objekter der var afhængige af objektet. Dette er mærkbart nemmere end at skulle søge igennem alle de andre objekter for at se hvilke der havde tilknytning til det. Et designmønster indeholder dog mere end en beskrivelse af motivationen bag det og en struktur for designløsningen. Der er også en beskrivelse af den sammenhæng mønsteret kan bruges i, altså en samling situationer hvori det kan være fornuftigt at anvende mønsteret. I dette tilfælde når:
+
+a) der findes en mængde af objekter der kommunikerer på en veldefineret, men kompleks måde; den resulterende afhængighed imellem objekter bliver ustruktureret og svær at overskue;
+b) genbrug af et objekt er besværlig fordi objektet referer til og kommunikerer med mange andre objekter;
+c)en opførsel der er distribueret mellem flere klasser, skal kunne tilpasses uden brug mange underklasser.
+
+
+En mere detaljeret viden om hvordan mønsteret skal anvendes, kan findes i afsnittene om deltagende objekter, kommunikation mellem dem og implementation. Desuden giver GoF-bogen kodeeksempler og en beskrivelse af de konsekvenser, positive som negative, der er ved anvendelsen af dette mønster.
 
 ## Arkitekturmønstre — to eksempler
 
 
+Vi har valgt at vise to eksempler på arkitekturmønstre fra bogen: „A System of Patterns“ [Busch 1997], *Layers* og *Broker*. Dette katalog af mønstre starter hver mønsterbeskrivelse med en kort præsentation af mønsterets brugbarhed, og for *Layers* beskrives dette som følger:
+
+
+*Dette arkitekturmønster hjælper med at strukturere applikationer der kan opdeles i grupper af delopgaver hvor hver gruppe af delopgaver har sit eget abstraktionsniveau.*
+
+
+Dernæst følger et eksempel på brug af mønsteret fra virkelighedens verden. For Layers findes et velkendt eksempel: netværksprotokoller. En netværksprotokol specificerer en mængde forskellige abstraktionsniveauer, helt nede fra detaljerne om bittransmissionen til højniveau applikationslogik. Derfor bruger designere flere delprotokoller og arrangerer dem i forskellige lag. Hvert lag tager sig af et bestemt aspekt af kommunikationen og bruger den service laget under det stiller til rådighed. At der bruges en lagdeling i stedet for at have det hele i en stor blok kan have mange årsager. Det gør det nemmere at arbejde i hold og at lave skridtvis kodning og afprøvning, og det øger muligheden for genbrug af dele af systemet. Bedre implementationsteknologier såsom nye sprog eller algoritmer kan indarbejdes på en simpel måde ved at man omskriver en afgrænset mængde af koden.
+
+
+Motivationen for at bruge netop dette mønster ligger i problembeskrivelsen, hvor en situation i hvilken dette mønster er en god løsning, beskrives. Problemet der kan lede til anvendelse af Layers er følgende: Der skal designes et system. Et fremtrædende karakteristikon ved systemet er blandingen af høj- og lav-niveau-emner. Højniveauemnerne afhænger af lavniveau-emnerne Her betegnes lavniveau som værende på hardware-niveau mens højniveau er brugergrænseflader.
+
+
+Løsningen ligger, som vist af strukturdiagrammet i figur 11, i at inddele systemet i lag med forskellige ansvarsområder. Strukturér systemet i et passende antal lag og placér dem ovenpå hinanden.
+
+
+Bemærk at beskrivelsen af dette mønster ikke viser præcis hvordan disse lag skal designes. Det giver bare en begrebsmæssig synsvinkel på hvordan det kan gøres. Hovedstrukturen er at der ikke er anden kommunikation mellem lagene end mellem den der foregår mellem to lag der ligger umiddelbart efter hinanden. Dette giver den ønskedearkitektur hvor velafgrænsede dele af systemet kan genbruges og ændres uden at berøre andre dele. Og det kan bygges af flere grupper programmører da de kan arbejde på hver sit delsystem fordi hvert delsystem har et veldefineret ansvarsområde og interface til delsystemet lige over og lige under.
+
+
+
 {id="Lagdeling"}
-![En lagdeling af et system til forenkling af systemudvikling og vedligeholdelse.](images/Lagdeling.jpg)
+![Figur 11. En lagdeling af et system til forenkling af systemudvikling og vedligeholdelse.](images/Lagdeling.jpg)
+
+Et andet eksempel på et arkitekturmønster er Broker. Mønsteret kan bruges til at strukturere distribuerede softwaresystemer med komponenter der er placerede forskellige steder og som kommunikerer med hinanden ved hjælp af kald af hinandens metoder. En Broker-komponent er ansvarlig for at koordinere kommunikation, såsom at videresende forespørgsler, samt at sende transmissioner og exceptions. Eksemplet fra den virkelige verden er et byinformationssystem der er designet til at køre på et WAN. Nogle computere i netværket er værter for en eller flere servicefunktioner der vedligeholder information om begivenheder, restauranter, hoteller eller offentlige transportmidler. Tur ister kan så, fra alle steder i byen, finde de oplysninger de er interesserede i, ved hjælp af en WWW-browser. Data er distribueret over netværket i stedet for at ligge i terminalerne. Da det forventes at systemet vil ændre sig og vokse kontinuerligt, skal de individuelle servicefunktioner afkobles fra hinanden. Terminalerne skal yderligere kunne tilgå disse funktioner uden at kende lokaliteten af dem.
+
+
+Det er altså et distribueret system med uafhængige sammenhængskomponenter. Motivationen for at bruge Broker-mønsteret ligger i at det at lave et system bestående af separate delkomponenter giver større fleksibilitet, vedligeholdelsesmuligheder og muligheder for ændringer end ét stort system. Problemet med et distribueret system af kommunikerende komponenter er dog at det bliver begrænset af den store afhængighed komponenterne imellem. Det bliver afhængigt af de kommunikationsmekanismer der bliver brugt, klienter skal vide hvor serverne ligger, og i mange tilfælde er løsningen begrænset til at blive skrevet i ét programmeringssprog.
+
+Der ønskes altså et system der kan lade komponenterne tilgå hinandens funktionalitet uden at vide hvor de andre komponenter ligger, hvor der kan tilføjes, skiftes eller fjernes komponenter på runtime, og hvor arkitekturen gemmer system- og implementationsafhængige detaljer fra brugerne af komponenter og funktioner.
+
+Løsningen er at introducere en formidler-komponent, broker, for bedre at kunne separere klienter og servere. Som det ses af figur 12, indeholder strukturen af Brokermønsteret følgende samarbejdende komponenter: klienter, servere, brokere, bridges, klient-side-proxier og server-side-proxier.
 
 
 
 {id="Broker"}
-![En kommunikationsprotokol mellem servere og klienter med forskellige fysiske placeringer.](images/Broker.jpg)
+![Figur 12. En kommunikationsprotokol mellem servere og klienter med forskellige fysiske placeringer.](images/Broker.jpg)
+
+Servere registrerer sig hos brokeren. Klienter tilgår servernes funktionalitet ved at sende forespørgsler via brokeren. En brokers ansvarsområde er at lokalisere serveren, videresende forespørgslen til den og transmittere resultater og exceptions tilbage til klienten. Klient-side-proxier repræsenterer et lag mellem klienter og brokeren; for at gemme kommunikationsdetaljerne mellem broker og klient for klienten. Analogt for serverside-proxier. Bridges er komponenter der tager sig af kommunikationsdetaljerne mellem forskellige brokere. Bridges er naturligvis kun nødvendige hvis der skal bruges mere end én broker eller hvis kommunikationen mellem dem er givet af en bestemt standard, som for eksempel http eller ftp. Eksempler på brug af Broker er Common Object Request Broker Architecture (CORBA), OLE 2.x og World Wide Web.
 
 
 
 ## Databasemønstre — 2 eksempler
 
+Vi præsenterer i dette afsnit et eksempel fra [Chasms 1995] og ét fra [Keller 1996]. Da det sidste er det enkleste, tager vi det først.
+
+Fra [Keller 1996] har vi valgt mønsteret Fysiske views (Physical Views). Dette mønster anviser en indkapsling af databasen på forholdsvis lavt niveau. (Ovenpå de fysiske views lægger [Keller 1996] logiske views, evt. adskilt af et forespørgselsmellemled (Query Broker; beslægtet med brokeren fra forrige afsnit, men ikke den samme).) Indkapslingen gør det muligt at benytte databaseoptimeringstricks såsom denormalisering, overløbstabeller og kontrolleret redundans uden at applikationsprogrammer der bruger de fysiske views, berøres; kun implementationen af det eller de relevante fysiske views skal ændres.
+
 {id="Fysiske Views"}
 ![Strukturen for databasemønsteret Fysiske views.](images/Fysiske Views.jpg)
+
+
+Mønsterets løsning er at indkapsle hver tabel og hvert view i databasen med et objekt der kaldes et fysisk view, som vist i figur 13. (En såkaldt overløbstabel indkapsles sammen med sin „forældretabel“.) De fysiske views har en fælles superklasse der erklærer de fælles operationer (f.eks. læs, indsæt, opdater, slet og læsFlere). Man kan definere yderligere fysiske views efter behov, f.eks. hen over joins. Da fysiske views er generiske, anbefaler mønsteret at man bruger en generator til at fremstille dem — eller en første udgave af dem. De kan evt. implementeres ved hjælp af „stored procedures“.
+
+
+Fysiske views kan også bruges til at indkapsle ikke-relationelle databaser, flade filer m.v.
+
+
+Mønsteret Broker fra gruppen af dynamiske mønstre i [Chasms 1995] er nok det mest centrale mønster i den artikel. Det anviser også en indkapsling af databasens tabeller. Enhver tabel indkapsles her af en databasebroker der ikke kun tager sig af tilgang til tabellen, men også af at konstruere objekter af de data der hentes fra databasen. Ligeledes accepterer den at tage imod objekter hvis dataindhold skal gemmes i eller slettes fra databasen. En brokerklasse kan evt. parametriseres med objekttypen således at fælles operationer kun specificeres ét sted. Brokeren kan evt. indeholde og styre en cache; hvis der er mulighed for at brokeren flere gange bliver bedt om at hente de samme data, vil det ofte være vigtigt at den ikke blot genererer flere objekter med det samme indhold, men returnerer en reference til det samme objekt hver gang. Ifølge [Chasms 1995] kan brokeren også styre transaktioner overfor databasen. Dette mønster er altså et andet end det arkitekturmønster af samme navn der blev præsenteret i afsnit C.3, og også et andet end mønsteret Query Broker fra [Keller 1996].

@@ -1,17 +1,55 @@
 {book: true, sample: false}
 # Appendix B Case: Udvikling af et planlægningssystem
 
+Som et eksempel på en udviklingsproces der gør brug af alle tre former for mønstre, har vi valgt et planlægningssystem til en softwarevirksomhed.
+
+
+Helt overordnet skal systemet kunne holde styr på hvilke udviklere der skal til hvilke møder, og hvilke lokaler møderne skal afholdes i. Der er forskellige typer personer der skal bruge systemet, og de er interesserede i forskellige ting. Sekretærerne vil gerne kunne se det hele. Udviklerne vil gerne kunne se hvor og hvornår de skal til møder. De som sidder i lønadministrationen, vil gerne kunne se hvor mange timer udviklerne har brugt på møderne, mens de ikke er interesserede i at vide hvor møderne blev holdt.
+
+
+Umiddelbart vil beskrivelsen af de forskellige syn på systemet, alt efter interesse i forskellige dele af datamængden, få en udvikler med kendskab til mønstre til at tænke på arkitekturmønsteret Model-View-Controller, også kaldet MVC, fra [Busch 1997]. Dette mønster deler et interaktivt system op i tre delsystemer som vist i figur 4.
+
+
+Model-delen indeholder data og den funktionalitet der ikke er relevant for kommunikation med brugeren. Views, eller synsvinkler, viser brugeren den delmængde af data han har interesse i, på en for ham illustrativ måde. Det kan være ved tabeller, figurer eller grafer. Controlleren, eller kontroldelen, tager sig af forespørgsler fra brugerne. Kontroldelen og synsvinklerne udgør tilsammen brugergrænsefladen. Ved denne opdeling opnås en adskillelse af datamængde og brugergrænseflade. Dette er en fordel da delsystemerne i systemet på den måde kan specificeres og udvikles uafhængigt af hinanden. Opdelingen gør systemet mere fleksibelt m.h.t. ændringer. Brugernes synsvinkler kan ændres uden at det får indflydelse på modellen og kontroldelen; og implementationen af modeldelen kan ændres uafhængigt af kontroldelen og synsvinklerne hvis
+grænsefladen til kontroldelen ikke ændres.
+
+
+
 
 {id="MVC"}
-![Model-View-Controller, et arkitekturmønster. Model indeholder datamængden og den funktionalitet der ikke er relevant for kommunikationen med brugeren. View giver fremstillingen af data til brugeren. Der kan være flere forskellige views, ét til hver slags bruger. Controller tager sig af kommunikationen med brugeren, sender de korrekte data til de implicerede views og sørger for at holde data i modellen ajour.](images/MVC.jpg)
+![Figur 4. Model-View-Controller, et arkitekturmønster. Model indeholder datamængden og den funktionalitet der ikke er relevant for kommunikationen med brugeren. View giver fremstillingen af data til brugeren. Der kan være flere forskellige views, ét til hver slags bruger. Controller tager sig af kommunikationen med brugeren, sender de korrekte data til de implicerede views og sørger for at holde data i modellen ajour.](images/MVC.jpg)
+
+Med valg af arkitekturmønster (delaktiviteten „arkitekturdesign“ som vist i figur 2) er den overordnede struktur for systemet lagt fast, men der mangler stadig en stor mængde designarbejde. Den detaljerede opdeling af klasser/objekter og deres kommunikation skal findes. En stor del kommer fra analysen af problemdomænet, men der vil stadig være en del designhuller der skal fyldes ud efter den første analyse er færdiggjort. Dette kan være fordi systemet kræver mere funktionalitet end der umiddelbart kunne udledes fra analysen.
+
+
+Et mønster som MVC beskriver den overordnede struktur, men detaljerne må tilføjes ved hjælp af mere detaljerede mønstre, designmønstre. Et åbent spørgsmål i MVC er hvordan og hvornår data ændres i forhold til de data der bliver ændret af en bruger fra hans synsvinkel på systemet. I en objektorienteret implementation af MVC ville man definere separate klasser for hver komponent i mønsteret. Så kan designmønsteret Observer fra GoF-bogen bruges til at bestemme kommunikationen mellem delsystemerne som det er vist i figur 5.
+
+Strukturen for dette mønster er næsten den samme som for MVC. Fordi Observer er et designmønster ligger data og view nu i objekter i stedet for i delsystemer. Kontroldelen i Observer ligger i data- og synsobjekterne i stedet for at ligge separat. Kommunikationen mellem data og synsvinkler foregår ved at brugeren ændrer data i sin synsvinkel, denne synsvinkel sender besked til dataobjektet, som automatisk sender
+besked om ændringen videre til alle andre synsvinkler der er tilknyttet dataobjektet. Når dette designmønster bruges til at bestemme kommunikationen mellem delsystemernebeskrevet af arkitekturmønsteret, vil systemet arve dets form for kommunikation og automatisk propagere alle ændringer ud til alle brugersyn.
 
 
 {id="Observer"}
-![En observer sørger for at kommunikationen holder data ved lige på den ønskede måde. En observer ændrer i modellen når der ændres i et view, modellen giver besked til Controller om at opdatere indholdet i alle views, og ændringen vises derefter i alle views.](images/MVCObserver.jpg)
+![Figur 5. En observer sørger for at kommunikationen holder data ved lige på den ønskede måde. En observer ændrer i modellen når der ændres i et view, modellen giver besked til Controller om at opdatere indholdet i alle views, og ændringen vises derefter i alle views.](images/MVCObserver.jpg)
+
+
+
 
 {id="Aktivitet"}
-![En aktivitet er planlagt eller udført og vil derfor enten reservere eller bruge en ressource. Ressourceallokering holder styr på hvilken type ressource der allokeres og hvor meget der er allokeret. Figuren er et eksempel på en analysemodel som vist på figur 2. Bemærk at dette er et analysemønster og at nedarvingspilene til Aktivitet kun betyder at Planlagt aktivitet og Udført aktivitet skal kunne behandles ens, ikke at de nødvendigvis skal være underklasser af samme superklasse.](images/Aktivitet.jpg)
+![Figur 6. En aktivitet er planlagt eller udført og vil derfor enten reservere eller bruge en ressource. Ressourceallokering holder styr på hvilken type ressource der allokeres og hvor meget der er allokeret. Figuren er et eksempel på en analysemodel som vist på figur 2. Bemærk at dette er et analysemønster og at nedarvingspilene til Aktivitet kun betyder at Planlagt aktivitet og Udført aktivitet skal kunne behandles ens, ikke at de nødvendigvis skal være underklasser af samme superklasse.](images/Aktivitet.jpg)
+
+
+Til analysen af problemdomænet hører en udvikling af en analysemodel (delaktiviteten analyse som vist i figur 2). Modellen skal tage hensyn til banale ting, såsom at folk ikke kan være to steder på en gang, og mere komplicerede ting som pladsbegrænsning i lokaler alt efter hvilken slags møde det er. I denne analyse bruges et mønster fra kapitlet om planlægningsmønstre i Fowlers bog. Vi springer direkte til ressourceallokeringen da det, fra vores synspunkt, er det vigtigste at få modelleret. Som det ses af figur 6 kan en aktivitet være foreslået eller udført. Forskellen ligger i om den eller de ressourcer den allokerer, er reserverede eller brugte. Og det er netop pointen i dette mønster.
+
+Analysemønsteret giver mulighed for at modellere flere udvidelser af denne model, men vi holder os i dette eksempel til ovenstående udgave af modellen.
+
+Modellen vil give anledning til design der skal ligge i modeldelen af systemet (som illustreret i figur 7) da den beskriver en grundlæggende funktionalitet for systemet. Det er kontroldelen af systemet der tager sig af input fra brugeren, så hvis brugeren igennem sit syn kommunikerer at en aktivitet er udført, vil kontroldelen fortælle modeldelen om det, og modeldelen vil derefter tage sig af det ifølge sin funktionalitet.
+
 
 {id="Systemdesigncirkel"}
-![Denne figur er et eksempel på indholdet af en systemdesigncirkel som vi så den i figur 2. Den viser det overordnede systemdesign beskrevet ved MVC hvor kommunikationen mellem delsystemerne er beskrevet ved Observer. Inden i modeldelen af MVC er analysemønsteret ressourceallokering brugt i analysen, og designet af dette beskrives ved State-mønsteret.](images/Systemdesigncirkel.jpg)
+![Figur 7. Denne figur er et eksempel på indholdet af en systemdesigncirkel som vi så den i figur 2. Den viser det overordnede systemdesign beskrevet ved MVC hvor kommunikationen mellem delsystemerne er beskrevet ved Observer. Inden i modeldelen af MVC er analysemønsteret ressourceallokering brugt i analysen, og designet af dette beskrives ved State-mønsteret.](images/Systemdesigncirkel.jpg)
 
+Idet ressourceallokering er en analysemodel, giver den ikke et design i sig selv. F.eks. kan det give god mening at lade ressourcetype og kvantitet smelte sammen til én klasse i designet for at opnå en forenkling hvis det ikke ødelægger analysemodellen. I en situation hvor der kun bruges én type ressourcer, f.eks. papir, er det kun nødvendigt atangive kvantiteten fordi det er oplagt hvilken type ressourcen har. I sådan et tilfælde
+ville det give et unødvendigt detaljeret design hvis analysemodellen blev fulgt til punkt og prikke. Til gengæld kan designmønsteret State fra GoF-bogen anvendes direkte på analysemodellen. Intentionen med State er at give en løsning på det designproblem der opstår når man gerne vil modellere at et objekt skifter tilstand og dermed funktionalitet igennem dets levetid, afhængigt af ydre påvirkninger (som brugerinput). I modellen i figur 6 er aktivitet et objekt der skifter tilstand fra planlagt til udført og dermed skifter funktionalitet, blandt andet er ressourcerne brugte i stedet for bare reserverede. Denne funktionalitet kan beskrives i designet ved hjælp at State.
+
+Lad os opsummere ved hjælp af figur 7. Til skelettet af systemet bruges MVC med en intern kommunikation beskrevet ved Observer. En del af modeldelen er analyseret ved
+hjælp af Ressourceallokering, og denne analysemodel ligger til grund for et design hvori der bruges State.
