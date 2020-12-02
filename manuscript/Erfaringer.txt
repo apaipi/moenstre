@@ -1,5 +1,5 @@
 {book: true, sample: false}
-# Erfaringer med mønstre
+# 5 Erfaringer med mønstre
 
 Dette og næste afsnit er skrevet med fokus på erfaring med og fordele af anvendelse af designmønstre. Der er tilsvarende erfaringsopsamlinger for analyse- og arkitekturmønstre, men vi har fokuseret på designmønstre her da det er den ældste og mest velbeskrevne form for mønstre indenfor systemudvikling.
 

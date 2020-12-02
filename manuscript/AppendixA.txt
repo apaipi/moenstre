@@ -4,29 +4,29 @@
 I dette afsnit gives en kortfattet beskrivelse af den notation vi har valgt at bruge i rapporten. For illustration henvises til figur 3.
 
 
-I denne notation er en klasse enten beskrevet ved en enkelt kasse der indeholder klassens navn, eller en tredelt kasse hvis attributterne og metoderne er vigtige for forståelsen. I sidstnævnte tilfælde indeholder den øverste del klassens navn, den midterste eventuelle variable, og den nederste de vigtigste metoder.
+I denne notation er en *klasse* enten beskrevet ved en enkelt kasse der indeholder klassens navn, eller en tredelt kasse hvis attributterne og metoderne er vigtige for forståelsen. I sidstnævnte tilfælde indeholder den øverste del klassens navn, den midterste eventuelle variable, og den nederste de vigtigste metoder.
 
 
 
-En klasse kan være en specialisering af en anden og være i relation til en anden på flere forskellige måder; nedarving, eller specialisering, af klasser er vist ved en pil med et hvidt pilehoved pegende på den klasse der specialiseres.
+En klasse kan være en specialisering af en anden og være i relation til en anden på flere forskellige måder; *nedarving*, eller specialisering, af klasser er vist ved en pil med et hvidt pilehoved pegende på den klasse der specialiseres.
 
 
 
-Kompositionsaggregering hvor det aggregerede element kun kan være en del af ét andet element, er repræsenteret ved en streg med en sort rombe med romben placeret ved den klasse der indeholder en instans af den anden. Et møde siges dermed at indeholde sine mødedeltagere idet rollen som mødedeltager eksisterer i kraft af mødet.
+*Kompositionsaggregering* hvor det aggregerede element kun kan være en del af ét andet element, er repræsenteret ved en streg med en sort rombe med romben placeret ved den klasse der indeholder en instans af den anden. Et møde siges dermed at indeholde sine mødedeltagere idet rollen som mødedeltager eksisterer i kraft af mødet.
 
 {id="UML"}
 ![Figur 3. UML er en grafisk notation til beskrivelse af et system.](images/UML.jpg)
 
-Dynamisk, eller simpel, aggregering er repræsenteret ved en streg med en hvid rombe med romben placeret ved den klasse der refererer til den anden. For eksempel er et tidspunkt ikke knyttet til ét møde; flere møder kan samtidig referere til det.
+*Dynamisk*, eller *simpel*, *aggregering* er repræsenteret ved en streg med en hvid rombe med romben placeret ved den klasse der refererer til den anden. For eksempel er et tidspunkt ikke knyttet til ét møde; flere møder kan samtidig referere til det.
 
 
 
-En relation kan også være uspecificeret, som en associering, hvor det kun angives at de er en relation, ikke hvilken slags relation. Disse relationer angives med streger, eventuelt med relationens navn angivet ved stregen.
+En relation kan også være uspecificeret, som en *associering*, hvor det kun angives at de er en relation, ikke hvilken slags relation. Disse relationer angives med streger, eventuelt med relationens navn angivet ved stregen.
 
 
 
-Kardinaliteten, hvor mange instanser af en bestemt klasse der indgår i en relation, er vist med tal i begge ender af stregerne. Tallet beskriver antallet for den klasse det står nærmest; i eksemplet nedenfor beskrives ved hjælp af disse at et møde refererer til ét tidspunkt mens et tidspunkt kan referere til et vilkårligt antal møder (heri indgår tallet nul). Man kan også se det på kompositionsaggregeringen, hvor et møde indeholder et vilkårligt antal mødedeltagere (dog mindst én).
+*Kardinaliteten*, hvor mange instanser af en bestemt klasse der indgår i en relation, er vist med tal i begge ender af stregerne. Tallet beskriver antallet for den klasse det står nærmest; i eksemplet nedenfor beskrives ved hjælp af disse at et møde refererer til ét tidspunkt mens et tidspunkt kan referere til et vilkårligt antal møder (heri indgår tallet nul). Man kan også se det på kompositionsaggregeringen, hvor et møde indeholder et vilkårligt antal mødedeltagere (dog mindst én).
 
 
 
-En pakke er en emballeret enhed, f.eks. et delsystem. Et samarbejde er en mængde elementer der i sammenhæng giver mere information en summen af elementerne tilsammen, f.eks. et mønster.
+En *pakke* er en emballeret enhed, f.eks. et delsystem. Et *samarbejde* er en mængde elementer der i sammenhæng giver mere information en summen af elementerne tilsammen, f.eks. et mønster.

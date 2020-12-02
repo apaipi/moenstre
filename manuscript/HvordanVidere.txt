@@ -1,5 +1,5 @@
 {book: true, sample: false}
-# Hvordan man kommer videre
+# 6 Hvordan man kommer videre
 
 Når anvendelsen af mønstre skal til at tage sin begyndelse, er det en god idé først at bruge lidt tid på at sætte sig grundigt ind i de mønstre man har valgt at bruge, og ikke bare slå op i en tilfældig bog om mønstre og bruge dem hovedløst. Det kan desuden være en god idé at kontakte en person der har forstand på mønstre; en mønster-mentor. En mønster-mentor kan bruges til at opmuntre udviklerne til at bruge mønstre og på samme tid sørge for at de bruger dem rigtigt. Det er et almindeligt begynderproblem at man bliver så begejstret for mønstre at man entusiastisk bruger dem til alting. Men selvom mønstre er gode, er de ikke gode i alle situationer. Det er ikke en god idé at prøve at ændre sine systemkrav så de kommer til at passe til en bestemt mønsterløsning.
 
@@ -10,7 +10,7 @@ Hvis det ikke er muligt at få en mønster-mentor, kan udviklerne lære at anven
 Det er naturligvis ikke meningen at man skal kunne huske alle mønstrene udenad. Når man har fået en fornemmelse for hvad de hver især dækker over af løsninger, er det en god idé at benytte litteraturen som opslagsbog når man overvejer at bruge et mønster.
 
 
-En god indgangsvinkel er at begynde at arbejde med mønstre i det små, altså med en overskuelig mængde i starten og langsomt udvide sit ordforråd med flere mønstre efterhånden som man arbejder med dem. Vi kan anbefale at læse bogen Pattern Hatching — Design Patterns Applied [Vlissides 1998], skrevet af John Vlissides. Han har selv opnået en del erfaring med brug af mønstre som nævnt i afsnit 5, og bogen er baseret på disse erfaringer.
+En god indgangsvinkel er at begynde at arbejde med mønstre i det små, altså med en overskuelig mængde i starten og langsomt udvide sit ordforråd med flere mønstre efterhånden som man arbejder med dem. Vi kan anbefale at læse bogen *Pattern Hatching — Design Patterns Applied* [Vlissides 1998], skrevet af John Vlissides. Han har selv opnået en del erfaring med brug af mønstre som nævnt i afsnit 5, og bogen er baseret på disse erfaringer.
 
 
 

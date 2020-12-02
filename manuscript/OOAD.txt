@@ -1,10 +1,9 @@
 {book: true, sample: false}
-# Mønstre og objektorienteret systemudvikling
+# 4 Mønstre og objektorienteret systemudvikling
 
 For en snes år siden identificerede en arkitekt, Christopher Alexander [Alex 77], en samling mønstre der gik igen i arkitekturens verden. Han mente at disse mønstre beskrev endegyldige sandheder for hvad der er godt for mennesker at bo og leve i. Hans mål var at folk selv, ved hjælp af disse mønstre, skulle kunne designe deres huse og haver.
 
-Omkring ti år efter introducerede et par dataloger denne idé for udviklere der brugte objektteknologi, ved at nedskrive løsninger på designproblemer på en homogen måde i artiklen: „Using Pattern Languages for Object-Oriented Programs“ [oopsla87]. I arkitekturens verden beskrives alt i termer af generelle begreber (Døre, vinduer og huse.) og specifikke fænomener (Hoveddøren, Downing Street nr. 10) ved hjælp af tekst og figurer. Denne beskrivelsesform er direkte oversættelig til objektteknologi, som behandler klasser og objekter. De første mønstre behandlede kun designproblemer på objekt/klasse-niveau, men da disse viste sig at være en succes, fulgte andre typer mønstre som analysemønstre og arkitekturmønstre.
-
+Omkring ti år efter introducerede et par dataloger denne idé for udviklere der brugte objektteknologi, ved at nedskrive løsninger på designproblemer på en homogen måde i artiklen: „Using Pattern Languages for Object-Oriented Programs“ [oopsla87]. I arkitekturens verden beskrives alt i termer af generelle begreber (Døre, vinduer og huse.) og specifikke fænomener (Hoveddøren, Downing Street nr. 10) ved hjælp af tekst *og* figurer. Denne beskrivelsesform er direkte oversættelig til objektteknologi, som behandler klasser og objekter. De første mønstre behandlede kun designproblemer på objekt/klasse-niveau, men da disse viste sig at være en succes, fulgte andre typer mønstre som analysemønstre og arkitekturmønstre.
 
 
 Fælles for disse mønstre er at de har deres oprindelse indenfor objektorientering. Mønstrene er ikke udviklet ved at nogen har sat sig ned og tænkt sig frem til dem; de er blevet opdaget som mønstre der går igen i gode design- og analyse-modeller. De er identificerede i objektorienteret sammenhæng og er derfor tydeligt objektorienterede i deres løsningsbeskrivelse idet de i høj grad beskæftiger sig med objekters ansvarsområder og indbyrdes kommunikation. Det er derfor fristende at konkludere at mønstre kun kan anvendes indenfor objektorienteret teknologi, men dette er ikke nødvendigvis sandt.
@@ -17,7 +16,7 @@ Umiddelbart kan siges at analyse- og arkitekturmønstre, idet de bruger objekt-t
 
 Hvad designmønstre angår, stiller sagen sig lidt anderledes. På den ene side er det rigtigt at mange designmønstre i deres løsningsbeskrivelse gør brug af objektorienterede sprogkonstruktioner som polymorfi og nedarving. På den anden side er disse ikke essentielle for implementationen af mønstrene. Nogle designmønstre kan fuldt ud implementeres i andre former for sprog mens andre bare mister en del af deres elegance ved det. Det kan blive nødvendigt at gå på kompromis med sine udtryksmuligheder afhængigt af hvilket værktøj der benyttes, men det er stadig muligt at bruge de gode ideer der ligger i dem, indenfor andre sprogparadigmer såsom funktionelle eller imperative sprog.
 
-## Udviklingsprocessen
+## 4.1 Udviklingsprocessen
 
 Figur 2 viser de forskellige delaktiviteter af en udviklingsproces og hvor de forskellige typer mønstre kan bruges i udviklingsprocessen.
 
@@ -50,7 +49,7 @@ I afsnit 4.2–4.4 bruger vi den skarpe opdeling af de tre typer mønstre for at
 
 Efter de tre afsnit om analyse-, design- og arkitekturmønstre følger afsnit 4.5 om databasemønstre. Databasemønstre er en betegnelse for visse design- og arkitekturmønstre som finder anvendelse i forbindelse med tilgang til relationelle databaser. Her fraviger vi altså opdelingen i de tre typer mønstre og samler beskrivelsen af disse i et afsnit for sig selv.
 
-## Analysemønstre
+## 4.2 Analysemønstre
 
 Analysemønstre som de beskrives i Fowlers bog [Fowler 1997], afspejler begrebsmæssige strukturer i problemdomænet mere end de beskriver aktuelle softwareimplementationer. Et analysemønster beskriver et typisk problem, en del af virkeligheden som umiddelbart kunne være blevet modelleret på en besværlig og ineffektiv måde. Dernæst giver det en løsning på hvordan en mulig model kunne se ud, og beskriver de problemer der måtte ligge i denne model. Det at bruge mønstre i analyse er en anden måde at gribe tingene an på end man hvis man bruger de teknikker til analyse der blev brugt allerede før mønstre blev introduceret. Analysemønstre giver hele løsninger mens ældre analysemetoder består af værktøj til at udlede løsningerne af problemområdet. Dette ses i Rumbaughs bog [Rum 1991], der beskriver teknikker og notation til analyse, og i Matthiasens bog [Mat 1997], der beskriver analyseaktiviteter. Et eksempel på et analysemønster findes i appendiks C.1.
 
@@ -64,22 +63,22 @@ Mønstrene deles op i 9 kategorier, hver med fokus på sit problemdomæne. Analy
 
 De 9 domæner er:
 
-1) Accountability: Organisering af strukturer for situationer hvor personer eller organisationer er ansvarlige for eller afhængige af hinanden.
-2) Observations and Measurement: En model for repræsentation af observationer og målinger.
-3) Observations for Corporate Finance: En udvidelse af mønstrene i førnævnte gruppe som gør at de kan anvendes indenfor finansanalyse.
-4) Referring to Objects: En gruppe af mønstre der giver modeller til repræsentation af referencer til objekter.
-5) Inventory and Accounting: En modellering af hvordan økonomien i et firma bevæger sig.
-6) Planning: Planlægningsmønstre. Individuelle planer og mere generelle protokoller for planer.
-7) Trading: Mønstre for modellering af køb og salg af varer.
-8) Derivative Contracts: Modeller for handel hvor en pris afhænger af en anden.
-9) Trading Packages: Hvordan en stor domænemodel opdeles i mindre dele.
+1) *Accountability*: Organisering af strukturer for situationer hvor personer eller organisationer er ansvarlige for eller afhængige af hinanden.
+2) *Observations and Measurement*: En model for repræsentation af observationer og målinger.
+3) *Observations for Corporate Finance*: En udvidelse af mønstrene i førnævnte gruppe som gør at de kan anvendes indenfor finansanalyse.
+4) *Referring to Objects*: En gruppe af mønstre der giver modeller til repræsentation af referencer til objekter.
+5) *Inventory and Accounting*: En modellering af hvordan økonomien i et firma bevæger sig.
+6) *Planning*: Planlægningsmønstre. Individuelle planer og mere generelle protokoller for planer.
+7) *Trading*: Mønstre for modellering af køb og salg af varer.
+8) *Derivative Contracts*: Modeller for handel hvor en pris afhænger af en anden.
+9) *Trading Packages*: Hvordan en stor domænemodel opdeles i mindre dele.
 
 
 Indenfor hvert domæne findes flere beskrivelser af mønstre hvor det første mønster der beskrives, er det simpleste. Martin Fowler bruger ideen i dette mønster til at bygge mere og mere komplicerede mønstre. I denne proces specialiserer han både problembeskrivelsen og løsningen. Dette giver en simpel indlæringsproces for læseren samtidig med at han bliver præsenteret for de mere komplicerede mønstre.
 
-## Designmønstre
+## 4.3 Designmønstre
 
-Et eksempel på et designmønster findes i appendiks C.2. I indledningen til GoF-bogen [Gamma 1994] siger forfatterne at bogen, på trods af sin størrelse, kun indeholder en lille del af de mønstre en designer har brug for. Den indeholder f.eks. ingen mønstre der har med parallelitet, distribution eller realtidsprogrammering at gøre. Men de mønstre bogen har med, dækker over design-erfaring som kan være nyttig at have ved hånden ved design af gode, genbrugelige objektorienterede systemer.
+Et eksempel på et designmønster findes i appendiks C.2. I indledningen til GoF-bogen [Gamma 1994] siger forfatterne at bogen, på trods af sin størrelse, kun indeholder en lille del af de mønstre en designer har brug for. Den indeholder f.eks. ingen mønstre der har med parallelitet, distribution eller realtidsprogrammering at gøre. Men de mønstre bogen *har* med, dækker over design-erfaring som kan være nyttig at have ved hånden ved design af gode, genbrugelige objektorienterede systemer.
 
 
 
@@ -90,40 +89,40 @@ Mønstrene i denne bog er alle på nogenlunde samme abstraktionsniveau. De er ik
 Bogen er skrevet af folk med en baggrund i programmeringssprogene C++ og Smalltalk, og de løsninger de kommer frem til er dermed de løsninger der er nemmest eller overhovedet mulige i disse sprog. Dette er vigtigt at holde sig for øje hvis bogens mønstre bruges i et andet programmeringssprog.
 
 
-Mønstrene er opdelt i tre kategorier; „creational“, de skabende, „structural“, de strukturelle og „behavioral“, de opførselsmæssige. De skabende mønstre tager sig af processen med at skabe objekter. De strukturelle mønstre beskæftiger sig med komposition af klasser eller objekter. De opførselsmæssige karakteriserer måderne hvorpå klasser eller objekter kommunikerer og samarbejder. Composite-mønsteret, som blev brugt i eksemplet i afsnit 3, er et strukturelt mønster fordi intentionen med det er at beskrive hvordan objekterne skal sammensættes. I appendiks C er et eksempel på et opførselsmæssigt mønster, Mediator. Dette beskriver hvordan objekterne i et design kan kommunikere.
+Mønstrene er opdelt i tre kategorier; „creational“, *de skabende*, „structural“, *de strukturelle* og „behavioral“, *de opførselsmæssige*. De skabende mønstre tager sig af processen med at skabe objekter. De strukturelle mønstre beskæftiger sig med komposition af klasser eller objekter. De opførselsmæssige karakteriserer måderne hvorpå klasser eller objekter kommunikerer og samarbejder. *Composite*-mønsteret, som blev brugt i eksemplet i afsnit 3, er et strukturelt mønster fordi intentionen med det er at beskrive hvordan objekterne skal sammensættes. I appendiks C er et eksempel på et opførselsmæssigt mønster, *Mediator*. Dette beskriver hvordan objekterne i et design kan kommunikere.
 
 
 
 Mønstrene i GoF-bogen inddeles ikke, som analysemønstrene, efter hvilke domæner de er identificeret i, men derimod efter hvilken type problemer de kan løse. Dette gøres, fordi forfatterne har forsøgt at vise mønstrene i en så neutral sammenhæng som muligt.
 
-## Arkitekturmønstre
+## 4.4 Arkitekturmønstre
 
 I bogen „Pattern-oriented Software Architecture“ [Busch 1997] findes ikke bare arkitekturmønstre, men også designmønstre og implementationsmønstre (også kaldet idiomer). Vi vil kun behandle arkitekturmønstrene her. Eksempler på arkitekturmønstre findes i appendiks C.3.
 
-Buschmann motiverer brug af arkitekturmønstre med at sige at levedygtige softwarearkitekturer er bygget ifølge nogle overordnede struktureringsprincipper. Disse principper kan beskrives af arkitekturmønstre. Et arkitekturmønster udtrykker et fundamentalt strukturelt organiseringsskema for softwaresystemer. Det giver et sæt prædefinerede delsystemer, specificerer deres ansvarsområder og inkluderer regler og retningslinjer for organiseringen af samspillet mellem dem. Arkitekturmønstre er skabeloner for konkrete softwarearkitekturer. De specificerer de overordnede strukturelle egenskaber af et softwaresystem og har en indvirkning på arkitekturen af dets delsystemer. Valget af arkitekturmønster er derfor en fundamental beslutning ved ud vikling af et softwaresystem.
+Buschmann motiverer brug af arkitekturmønstre med at sige at levedygtige softwarearkitekturer er bygget ifølge nogle overordnede struktureringsprincipper. Disse principper kan beskrives af arkitekturmønstre. Et *arkitekturmønster* udtrykker et fundamentalt strukturelt organiseringsskema for softwaresystemer. Det giver et sæt prædefinerede delsystemer, specificerer deres ansvarsområder og inkluderer regler og retningslinjer for organiseringen af samspillet mellem dem. Arkitekturmønstre er skabeloner for konkrete softwarearkitekturer. De specificerer de overordnede strukturelle egenskaber af et softwaresystem og har en indvirkning på arkitekturen af dets delsystemer. Valget af arkitekturmønster er derfor en fundamental beslutning ved ud vikling af et softwaresystem.
 
 
 Arkitekturmønstrene i bogen er inddelt i 4 grupper efter hvilken type overordnet plan mønsteret følger. Den første, „fra mudderhul til struktur“, fokuserer på at strukturere ellers forvirrende systemarkitekturer. Specielt understøtter mønstrene i denne gruppe en kontrolleret opdeling af det overordnede system i samarbejdende delopgaver. Den anden, „distribuerede systemer“, indeholder mønstre til design af distribuerede systemer. Den tredje, „interaktive systemer“, er til design af systemer med brugerinteraktion. Og den fjerde, „systemer der tilpasses“, består af mønstre til design af fleksible systemer der skal kunne udvides og ændres nemt og effektivt.
 
 
-I appendiks C har vi Layers, et mønster fra gruppen „fra mudderhul til struktur“, og Broker, et mønster fra gruppen „distribuerede systemer“. I appendiks B, hvor et eksempel på brug af alle tre typer mønstre er vist, bruges Model-View-Controller fra gruppen „interaktive systemer“.
+I appendiks C har vi *Layers*, et mønster fra gruppen „fra mudderhul til struktur“, og *Broker*, et mønster fra gruppen „distribuerede systemer“. I appendiks B, hvor et eksempel på brug af alle tre typer mønstre er vist, bruges *Model-View-Controller* fra gruppen „interaktive systemer“.
 
-## Databasemønstre
+## 4.5 Databasemønstre
 
-Mange systemudviklere har gennem tiden erfaret at det ikke er trivielt at tilgå relationelle databaser på en pæn og vedligeholdelsesvenlig måde, heller ikke fra objektorienterede programmer. F.eks. har nogle udviklere fundet det nødvendigt at forurene deres applikationskode med SQL-kode der er afhængig af detaljer i databasedesignet der burde være applikationens kerne uvedkommende; eller de har dubleret triviel databasetilgangskode næsten i det uendelige for at kunne tilgå mange tabeller i en database. Der findes en del mønstre der løser problemer i denne forbindelse. Sådanne mønstre har vi valgt at kalde databasemønstre. Databasemønstre er således ikke en fjerde slags mønstre ved siden af analyse-, design- og arkitekturmønstre. Tværtimod er ethvert mønster der bliver præsenteret i det følgende, enten et design- eller et arkitekturmønster. Men da disse mønstre hører sammen og bruges sammen, har vi valgt at præsentere dem i et afsnit for sig selv. Her vil vi kort se på mønstre fra de to artikler [Chasms 1995] og [Keller 1996]. Eksempler fra begge artikler findes i appendiks C.4.
+Mange systemudviklere har gennem tiden erfaret at det ikke er trivielt at tilgå relationelle databaser på en pæn og vedligeholdelsesvenlig måde, heller ikke fra objektorienterede programmer. F.eks. har nogle udviklere fundet det nødvendigt at forurene deres applikationskode med SQL-kode der er afhængig af detaljer i databasedesignet der burde være applikationens kerne uvedkommende; eller de har dubleret triviel databasetilgangskode næsten i det uendelige for at kunne tilgå mange tabeller i en database. Der findes en del mønstre der løser problemer i denne forbindelse. Sådanne mønstre har vi valgt at kalde *databasemønstre*. Databasemønstre er således ikke en fjerde slags mønstre ved siden af analyse-, design- og arkitekturmønstre. Tværtimod er ethvert mønster der bliver præsenteret i det følgende, enten et design- eller et arkitekturmønster. Men da disse mønstre hører sammen og bruges sammen, har vi valgt at præsentere dem i et afsnit for sig selv. Her vil vi kort se på mønstre fra de to artikler [Chasms 1995] og [Keller 1996]. Eksempler fra begge artikler findes i appendiks C.4.
 
-Crossing Chasms [Chasms 1995] betyder at krydse kløfter; i dette tilfælde kløfterne mellem objektorienterede programmer og relationelle databaser.
+*Crossing Chasms* [Chasms 1995] betyder at krydse kløfter; i dette tilfælde kløfterne mellem objektorienterede programmer og relationelle databaser.
 
 Mønstrene i artiklen er inddelt i tre grupper à ni mønstre:
 
-1) De statiske mønstre: Syv af disse beskriver hvordan man repræsenterer en objektorienteret model i tabeller i en relationel database. Et par af de problemer der løses, er at objekter ikke har primærnøgler, men til gengæld har identiteter på en anden måde end rækker i en tabel. Der er f.eks. mønstre der beskriver hvordan man repræsenterer objekter, objektrelationer, specialiseringshierarkier og „collections“ i tabeller. De sidste to statiske mønstre vedrører det objektorienterede program; det ene anbefaler f.eks. at man i programmet så vidt muligt bruger direkte referencer mellem objekter fremfor (databasens) fremmednøgler.
+1) *De statiske mønstre*: Syv af disse beskriver hvordan man repræsenterer en objektorienteret model i tabeller i en relationel database. Et par af de problemer der løses, er at objekter ikke har primærnøgler, men til gengæld har identiteter på en anden måde end rækker i en tabel. Der er f.eks. mønstre der beskriver hvordan man repræsenterer objekter, objektrelationer, specialiseringshierarkier og „collections“ i tabeller. De sidste to statiske mønstre vedrører det objektorienterede program; det ene anbefaler f.eks. at man i programmet så vidt muligt bruger direkte referencer mellem objekter fremfor (databasens) fremmednøgler.
 
-2) De dynamiske mønstre: en række mønstre til brug i et program i forbindelse med tilgang til databasen, herunder håndtering af hentning, gemning og transaktioner. Her håndteres bl.a. det problem at databasens relationelle model af verden ser anderledes ud end programmets objektorienterede model af den samme verden.
+2) *De dynamiske mønstre*: en række mønstre til brug i et program i forbindelse med tilgang til databasen, herunder håndtering af hentning, gemning og transaktioner. Her håndteres bl.a. det problem at databasens relationelle model af verden ser anderledes ud end programmets objektorienterede model af den samme verden.
 
-3) Client-server-mønstrene: Disse mønstre beskriver samspillet mellem et applikationsprogram og en database, f.eks. fordeling af opførsel (kode), synkronisering mellem data de to steder, låsningsstrategi og caching. Emnerne er relevante uanset om applikation og database kører på samme maskine eller (som ofte) fordelt på to eller tre maskiner.
+3) *Client-server-mønstrene*: Disse mønstre beskriver samspillet mellem et applikationsprogram og en database, f.eks. fordeling af opførsel (kode), synkronisering mellem data de to steder, låsningsstrategi og caching. Emnerne er relevante uanset om applikation og database kører på samme maskine eller (som ofte) fordelt på to eller tre maskiner.
 
-I en senere artikel [Chasms 1998] har Kyle Brown præsenteret fire arkitekturmønstre til Crossing Chasms. Her beskæftiger han sig bl.a. med en moderne trelags- (three tier) arkitektur.
+I en senere artikel [Chasms 1998] har Kyle Brown præsenteret fire arkitekturmønstre til *Crossing Chasms*. Her beskæftiger han sig bl.a. med en moderne trelags- (three tier) arkitektur.
 
-Artiklen [Keller 1996] er især beregnet på situationer hvor man gerne vil ændre databasedesignet af hensyn til tilgangstid efter at man er begyndt at udvikle applikationsprogrammer der bruger databasen. Under visse forudsætninger kan med anvendelse af mønstre fra artiklen holde database-tabel- og -feltnavn helt ude af koden til applikationsprogrammers kerne. Artiklen lægger desuden vægt på at de anbefalede løsninger kan implementeres i ikke-objektorienterede sprog. Artiklen præsenterer en ramme (framework pattern) kaldet Relational Database Access Layer, nogle strukturelle mønstre hvoraf de hierarkiske, logiske views og de fysiske views er centrale, samt et antal gængse databaseoptimeringstricks.
+Artiklen [Keller 1996] er især beregnet på situationer hvor man gerne vil ændre databasedesignet af hensyn til tilgangstid efter at man er begyndt at udvikle applikationsprogrammer der bruger databasen. Under visse forudsætninger kan med anvendelse af mønstre fra artiklen holde database-tabel- og -feltnavn helt ude af koden til applikationsprogrammers kerne. Artiklen lægger desuden vægt på at de anbefalede løsninger kan implementeres i ikke-objektorienterede sprog. Artiklen præsenterer en ramme (framework pattern) kaldet *Relational Database Access Layer*, nogle strukturelle mønstre hvoraf de hierarkiske, logiske views og de fysiske views er centrale, samt et antal gængse databaseoptimeringstricks.
 
 
